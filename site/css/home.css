@@ -1,4 +1,4 @@
-﻿* {
+* {
   box-sizing: border-box;
 }
 
@@ -104,8 +104,8 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -25%;
-  z-index: 6;
+  bottom: -28%;
+  z-index: 8;
   pointer-events: none;
   transform-origin: 50% 100%;
 }
@@ -286,7 +286,7 @@ a {
   z-index: 3;
   display: block;
   pointer-events: none;
-  transition: left 1.05s cubic-bezier(0.22, 1, 0.36, 1), right 1.05s cubic-bezier(0.22, 1, 0.36, 1), top 1.05s cubic-bezier(0.22, 1, 0.36, 1), bottom 1.05s cubic-bezier(0.22, 1, 0.36, 1), width 1.05s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease, filter 0.8s ease, transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: left 1.05s cubic-bezier(0.22, 1, 0.36, 1), top 1.05s cubic-bezier(0.22, 1, 0.36, 1), bottom 1.05s cubic-bezier(0.22, 1, 0.36, 1), width 1.05s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease, filter 0.8s ease, transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .home-hero__item img {
@@ -313,24 +313,22 @@ a {
   transform: translate3d(0, -6px, 0) scale(1.012);
 }
 
-.home-hero__item.is-prev {
-  left: 7.2%;
-  bottom: 8.2%;
-  z-index: 5;
-  width: min(18vw, 310px);
-  opacity: 0.5;
-  filter: grayscale(0.12) saturate(0.88) blur(0.15px);
-  transform: scale(0.84);
-}
-
+.home-hero__item.is-prev,
 .home-hero__item.is-next {
-  right: 4.3%;
   bottom: 8.5%;
   z-index: 5;
   width: min(18vw, 310px);
   opacity: 0.55;
   filter: grayscale(0.08) saturate(0.92) blur(0.15px);
   transform: scale(0.86);
+}
+
+.home-hero__item.is-prev {
+  left: 7.2%;
+}
+
+.home-hero__item.is-next {
+  left: calc(100% - min(18vw, 310px) - 4.3%);
 }
 
 .home-hero__item.is-hidden {
@@ -743,15 +741,16 @@ a {
     top: 16%;
     width: 37%;
   }
-  .home-hero__item.is-prev {
-    left: 5.2%;
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
     bottom: 10.5%;
     width: min(14vw, 190px);
   }
+  .home-hero__item.is-prev {
+    left: 5.2%;
+  }
   .home-hero__item.is-next {
-    right: 3.5%;
-    bottom: 10.5%;
-    width: min(14vw, 190px);
+    left: calc(100% - min(14vw, 190px) - 3.5%);
   }
   .home-hero__item--rider.is-main {
     left: 43%;
