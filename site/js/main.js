@@ -9,7 +9,7 @@
 
     try {
       const response = await fetch(`site/components/${componentName}.html`, {
-        cache: 'force-cache',
+        cache: 'no-store',
         credentials: 'omit',
       });
 
@@ -99,13 +99,21 @@
 
     const toggleMobileMenu = () => {
       const shouldOpen = !isMenuOpen();
+
       closeSearch();
       closeDesktopCatalog();
+
+      if (shouldOpen) {
+        header.classList.remove('site-header--hidden');
+      }
 
       header.classList.toggle('site-header--menu-open', shouldOpen);
       mobileMenu?.setAttribute('aria-hidden', String(!shouldOpen));
       menuToggle?.setAttribute('aria-expanded', String(shouldOpen));
-      menuToggle?.setAttribute('aria-label', shouldOpen ? 'Закрыть меню' : 'Открыть меню');
+      menuToggle?.setAttribute(
+        'aria-label',
+        shouldOpen ? 'Закрыть меню' : 'Открыть меню',
+      );
       document.body.classList.toggle('header-menu-open', shouldOpen);
     };
 
@@ -132,7 +140,17 @@
       ticking = false;
     };
 
-    menuToggle?.addEventListener('click', toggleMobileMenu);
+    menuToggle?.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleMobileMenu();
+    });
+
+    mobileMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
 
     catalogToggle?.addEventListener('click', (event) => {
       event.preventDefault();
@@ -158,9 +176,17 @@
     searchClose?.addEventListener('click', () => closeSearch({ restoreFocus: true }));
 
     document.addEventListener('click', (event) => {
-      if (!header.contains(event.target)) {
+      if (header.contains(event.target)) return;
+
+      if (catalogItem?.classList.contains('is-open')) {
         closeDesktopCatalog();
+      }
+
+      if (isSearchOpen()) {
         closeSearch();
+      }
+
+      if (isMenuOpen()) {
         closeMobileMenu();
       }
     });
