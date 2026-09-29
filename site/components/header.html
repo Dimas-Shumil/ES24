@@ -15,19 +15,32 @@
       </button>
     </div>
 
-    <a class="site-header__logo" href="index.html" aria-label="Enduro Siberia 24 — главная">
-      <span class="site-header__logo-main">
-        <span>ES</span><strong>24</strong>
-      </span>
-      <span class="site-header__logo-sub">ENDURO SIBERIA</span>
+    <a
+      class="site-header__logo"
+      href="index.html"
+      aria-label="Enduro Siberia 24 — главная"
+    >
+      <img
+        class="site-header__logo-image"
+        src="site/img/logo-white.webp"
+        alt=""
+        decoding="async"
+      />
     </a>
 
     <nav class="site-header__nav" aria-label="Основная навигация">
-      <a class="site-header__nav-link" href="index.html" data-nav-home>Главная</a>
+      <a class="site-header__nav-link" href="index.html" data-nav-home
+        >Главная</a
+      >
 
       <div class="site-header__nav-item site-header__nav-item--catalog">
         <div class="site-header__nav-catalog-trigger">
-          <a class="site-header__nav-link" href="index.html#categories" data-nav-motorcycles>Мотоциклы</a>
+          <a
+            class="site-header__nav-link"
+            href="index.html#categories"
+            data-nav-motorcycles
+            >Мотоциклы</a
+          >
           <button
             class="site-header__catalog-toggle"
             type="button"
@@ -51,7 +64,10 @@
           </a>
 
           <a class="site-header__catalog-card" href="index.html#pitbikes">
-            <span class="site-header__catalog-media site-header__catalog-media--pit" aria-hidden="true">
+            <span
+              class="site-header__catalog-media site-header__catalog-media--pit"
+              aria-hidden="true"
+            >
               <img src="site/img/mot.webp" alt="" />
             </span>
             <span class="site-header__catalog-copy">
@@ -60,11 +76,15 @@
             </span>
           </a>
 
-          <a class="site-header__catalog-all" href="legend-300.html">Regulmoto Legend 300</a>
+          <a class="site-header__catalog-all" href="legend-300.html"
+            >Regulmoto Legend 300</a
+          >
         </div>
       </div>
 
-      <a class="site-header__nav-link" href="index.html#equipment">Экипировка</a>
+      <a class="site-header__nav-link" href="index.html#equipment"
+        >Экипировка</a
+      >
       <a class="site-header__nav-link" href="index.html">О компании</a>
       <a class="site-header__nav-link" href="index.html">Контакты</a>
     </nav>
@@ -87,11 +107,21 @@
         </svg>
       </button>
 
-      <a class="site-header__icon-button site-header__favorites" href="index.html#categories" aria-label="Избранное">
+      <a
+        class="site-header__icon-button site-header__favorites"
+        href="index.html#categories"
+        aria-label="Избранное"
+      >
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20.5 8.8c0 5-8.5 10.2-8.5 10.2S3.5 13.8 3.5 8.8A4.3 4.3 0 0 1 12 7.7a4.3 4.3 0 0 1 8.5 1.1Z"></path>
+          <path
+            d="M20.5 8.8c0 5-8.5 10.2-8.5 10.2S3.5 13.8 3.5 8.8A4.3 4.3 0 0 1 12 7.7a4.3 4.3 0 0 1 8.5 1.1Z"
+          ></path>
         </svg>
-        <span class="site-header__favorites-count" aria-label="0 товаров в избранном">0</span>
+        <span
+          class="site-header__favorites-count"
+          aria-label="0 товаров в избранном"
+          >0</span
+        >
       </a>
 
       <a class="site-header__stock" href="legend-300.html">В наличии</a>
@@ -99,7 +129,12 @@
   </div>
 
   <div class="site-header__search" data-header-search aria-hidden="true">
-    <form class="site-header__search-form" action="index.html" method="get" role="search">
+    <form
+      class="site-header__search-form"
+      action="index.html"
+      method="get"
+      role="search"
+    >
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="11" cy="11" r="6.5"></circle>
         <path d="m16 16 4.25 4.25"></path>
@@ -125,33 +160,33 @@
     data-header-mobile-menu
   >
     <div class="site-header__mobile-panel-inner">
-    <nav class="site-header__mobile-nav" aria-label="Мобильная навигация">
-      <a href="index.html" data-nav-home>Главная</a>
+      <nav class="site-header__mobile-nav" aria-label="Мобильная навигация">
+        <a href="index.html" data-nav-home>Главная</a>
 
-      <div class="site-header__mobile-catalog">
-        <div class="site-header__mobile-catalog-head">
-          <a href="index.html#categories">Мотоциклы</a>
-          <button
-            type="button"
-            aria-label="Показать категории мотоциклов"
-            aria-expanded="false"
-            data-mobile-catalog-toggle
-          >
-            <span aria-hidden="true"></span>
-          </button>
+        <div class="site-header__mobile-catalog">
+          <div class="site-header__mobile-catalog-head">
+            <a href="index.html#categories">Мотоциклы</a>
+            <button
+              type="button"
+              aria-label="Показать категории мотоциклов"
+              aria-expanded="false"
+              data-mobile-catalog-toggle
+            >
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="site-header__mobile-subnav" data-mobile-catalog>
+            <a href="index.html#enduro">Эндуро</a>
+            <a href="index.html#pitbikes">Питбайки</a>
+            <!-- <a href="legend-300.html">Regulmoto Legend 300</a> -->
+          </div>
         </div>
-        <div class="site-header__mobile-subnav" data-mobile-catalog>
-          <a href="index.html#enduro">Эндуро</a>
-          <a href="index.html#pitbikes">Питбайки</a>
-          <a href="legend-300.html">Regulmoto Legend 300</a>
-        </div>
-      </div>
 
-      <a href="index.html#equipment">Экипировка</a>
-      <a href="index.html">О компании</a>
-      <a href="index.html">Контакты</a>
-      <a href="index.html">Партнёрам</a>
-    </nav>
+        <a href="index.html#equipment">Экипировка</a>
+        <a href="index.html">О компании</a>
+        <a href="index.html">Контакты</a>
+        <a href="index.html">Партнёрам</a>
+      </nav>
 
       <div class="site-header__mobile-footer">
         <a class="site-header__mobile-account" href="#" data-mobile-account>

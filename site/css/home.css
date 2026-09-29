@@ -42,6 +42,7 @@ a {
   min-height: 720px;
   overflow: hidden;
   background: #f7f7f3;
+  overflow: hidden;
 }
 
 .home-hero__background {
@@ -1411,5 +1412,1160 @@ a {
 @media (max-width: 900px) and (hover: none) and (pointer: coarse) {
   .home-hero__item.is-main:hover {
     transform: translateX(-50%);
+  }
+}
+@media (min-width: 901px) {
+  .home-hero {
+    min-height: 0;
+  }
+}
+@media (min-width: 1921px) {
+  .home-hero__ground {
+    left: 50%;
+    right: auto;
+    width: 100%;
+  }
+  .home-hero__ground img {
+    width: min(122vw, 227.933vh);
+    margin-left: 0;
+    transform: translateX(-50%);
+  }
+  .home-hero__content {
+    width: 40.625vw;
+  }
+  .home-hero__title {
+    font-size: 5.25vw;
+  }
+  .home-hero__title span,
+  .home-hero__title strong {
+    margin-left: -1.146vw;
+    padding-right: 1.146vw;
+    padding-left: 1.146vw;
+  }
+  .home-hero__title span {
+    background-size: 75.521vw auto;
+  }
+  .home-hero__title strong {
+    margin-top: 0.208vw;
+    background-size: auto, 61.458vw auto;
+  }
+  .home-hero__slash--acid {
+    left: 67.5%;
+  }
+  .home-hero__slash--dark {
+    left: 60.5%;
+  }
+  .home-hero__copy {
+    max-width: 30.729vw;
+    margin-top: 1.146vw;
+    font-size: 0.938vw;
+  }
+  .home-hero__actions {
+    gap: 0.625vw;
+    margin-top: 1.354vw;
+  }
+  .home-hero__button {
+    min-height: 2.604vw;
+    padding-right: 1.354vw;
+    padding-left: 1.354vw;
+    border-radius: 0.208vw;
+    font-size: 0.625vw;
+  }
+  .home-hero__manifest {
+    gap: 0.313vw;
+    padding-right: 1.25vw;
+    font-size: 0.573vw;
+  }
+  .home-hero__manifest::before {
+    height: 3.021vw;
+  }
+  .home-hero__manifest::after {
+    right: 0.885vw;
+    bottom: -0.833vw;
+    width: 1.042vw;
+    height: 0.156vw;
+  }
+  .home-hero__item.is-main {
+    width: min(35vw, 80vh);
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    width: min(16.146vw, 38vh);
+    bottom: -2%;
+  }
+  .home-hero__item.is-next {
+    left: calc(100% - min(16.146vw, 38vh) - 4.3%);
+  }
+  .home-hero__item.is-hidden {
+    width: min(11.979vw, 28vh);
+  }
+  .home-hero__item--rider.is-main {
+    width: min(33.333vw, 76vh);
+  }
+  .home-hero__item--rider.is-prev,
+  .home-hero__item--rider.is-next,
+  .home-hero__item--parts.is-prev,
+  .home-hero__item--parts.is-next {
+    width: min(13.542vw, 32vh);
+  }
+  .home-hero__item--parts {
+    height: min(27.083vw, 62vh);
+    min-height: 0;
+  }
+  .home-hero__item--parts.is-main {
+    width: min(33.333vw, 76vh);
+  }
+  .home-hero__item--parts.is-prev,
+  .home-hero__item--parts.is-next {
+    height: min(13.542vw, 32vh);
+  }
+  .home-hero__benefit {
+    min-width: 8.854vw;
+    min-height: 2.5vw;
+    padding-right: 1.146vw;
+    padding-left: 1.146vw;
+    gap: 0.573vw;
+  }
+  .home-hero__benefit svg {
+    width: 1.354vw;
+    height: 1.354vw;
+    flex-basis: 1.354vw;
+  }
+  .home-hero__benefit > span {
+    gap: 0.208vw;
+  }
+  .home-hero__benefit strong {
+    font-size: 0.573vw;
+  }
+  .home-hero__benefit small {
+    font-size: 0.469vw;
+  }
+  .home-hero__progress {
+    gap: 0.365vw;
+  }
+  .home-hero__progress span {
+    width: 2.708vw;
+    height: 0.208vw;
+  }
+  .home-hero__progress span.is-active {
+    width: 3.542vw;
+  }
+  .home-hero__tabs {
+    width: 55.208vw;
+    height: 4.219vw;
+    gap: 0.156vw;
+    padding: 0.26vw;
+    border-radius: 0.833vw;
+  }
+  .home-hero__tab {
+    gap: 0.625vw;
+    padding: 0.26vw 0.781vw;
+    border-radius: 0.521vw;
+  }
+  .home-hero__tab.is-active {
+    border-width: 0.104vw;
+    border-radius: 0.885vw;
+  }
+  .home-hero__tab-media {
+    width: 3.958vw;
+    height: 3.125vw;
+    flex-basis: 3.958vw;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 5vw;
+    flex-basis: 5vw;
+  }
+  .home-hero__tab strong {
+    padding-bottom: 0.625vw;
+    font-size: 0.625vw;
+  }
+  .home-hero__tab strong::after {
+    bottom: 0.052vw;
+    width: 1.563vw;
+    height: 0.156vw;
+  }
+  .home-hero__arrow {
+    width: 2.813vw;
+    height: 2.813vw;
+  }
+  .home-hero__arrow span {
+    width: 0.677vw;
+    height: 0.677vw;
+  }
+}
+@media (min-width: 1921px) and (min-aspect-ratio: 57/20) {
+  .home-hero__content {
+    width: 115.781vh;
+  }
+  .home-hero__title {
+    font-size: 14.963vh;
+  }
+  .home-hero__title span,
+  .home-hero__title strong {
+    margin-left: -3.266vh;
+    padding-right: 3.266vh;
+    padding-left: 3.266vh;
+  }
+  .home-hero__title span {
+    background-size: 215.235vh auto;
+  }
+  .home-hero__title strong {
+    margin-top: 0.593vh;
+    background-size: auto, 175.155vh auto;
+  }
+  .home-hero__copy {
+    max-width: 87.578vh;
+    margin-top: 3.266vh;
+    font-size: 2.673vh;
+  }
+  .home-hero__actions {
+    gap: 1.781vh;
+    margin-top: 3.859vh;
+  }
+  .home-hero__button {
+    min-height: 7.421vh;
+    padding-right: 3.859vh;
+    padding-left: 3.859vh;
+    border-radius: 0.593vh;
+    font-size: 1.781vh;
+  }
+  .home-hero__benefit {
+    min-width: 25.234vh;
+    min-height: 7.125vh;
+    padding-right: 3.266vh;
+    padding-left: 3.266vh;
+    gap: 1.633vh;
+  }
+  .home-hero__benefit svg {
+    width: 3.859vh;
+    height: 3.859vh;
+    flex-basis: 3.859vh;
+  }
+  .home-hero__benefit strong {
+    font-size: 1.633vh;
+  }
+  .home-hero__benefit small {
+    font-size: 1.337vh;
+  }
+  .home-hero__tabs {
+    width: 157.343vh;
+    height: 12.024vh;
+    gap: 0.445vh;
+    padding: 0.741vh;
+    border-radius: 2.374vh;
+  }
+  .home-hero__tab {
+    gap: 1.781vh;
+    padding: 0.741vh 2.226vh;
+    border-radius: 1.485vh;
+  }
+  .home-hero__tab.is-active {
+    border-width: 0.296vh;
+    border-radius: 2.522vh;
+  }
+  .home-hero__tab-media {
+    width: 11.28vh;
+    height: 8.906vh;
+    flex-basis: 11.28vh;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 14.25vh;
+    flex-basis: 14.25vh;
+  }
+  .home-hero__tab strong {
+    padding-bottom: 1.781vh;
+    font-size: 1.781vh;
+  }
+  .home-hero__arrow {
+    width: 8.017vh;
+    height: 8.017vh;
+  }
+  .home-hero__arrow span {
+    width: 1.929vh;
+    height: 1.929vh;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .home-hero__tabs {
+    width: 56vw;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1919px) and (max-height: 780px) {
+  .home-hero__content {
+    top: 12.8%;
+    width: 43vw;
+  }
+  .home-hero__title {
+    font-size: clamp(72px, 5.2vw, 88px);
+  }
+  .home-hero__copy {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .home-hero__actions {
+    margin-top: 12px;
+  }
+  .home-hero__item.is-main {
+    top: 12.8%;
+    width: min(35vw, 72svh);
+  }
+  .home-hero__item--rider.is-main,
+  .home-hero__item--parts.is-main {
+    top: 16.5%;
+    width: min(32vw, 69svh);
+  }
+  .home-hero__ground {
+    bottom: -30%;
+  }
+  .home-hero__benefits {
+    bottom: 16.8%;
+  }
+  .home-hero__progress {
+    bottom: 14.8%;
+  }
+  .home-hero__tabs {
+    width: 58vw;
+    height: 72px;
+    bottom: 1.7%;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1440px) {
+  .home-hero__content {
+    left: 4.35%;
+    top: 13.4%;
+    width: 46vw;
+  }
+  .home-hero__title {
+    font-size: clamp(58px, 5.55vw, 82px);
+    line-height: 0.87;
+  }
+  .home-hero__copy {
+    max-width: 500px;
+    margin-top: 12px;
+    font-size: clamp(13px, 1vw, 15px);
+  }
+  .home-hero__actions {
+    gap: 9px;
+    margin-top: 14px;
+  }
+  .home-hero__button {
+    min-height: 45px;
+    padding-inline: 20px;
+    font-size: 10px;
+  }
+  .home-hero__item.is-main {
+    left: 38.5%;
+    top: 14.2%;
+    width: min(36.5vw, 70svh);
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 9.5%;
+    width: min(15vw, 220px);
+  }
+  .home-hero__item.is-prev {
+    left: 5.8%;
+  }
+  .home-hero__item.is-next {
+    left: calc(100% - min(15vw, 220px) - 3.8%);
+  }
+  .home-hero__item--rider.is-main {
+    left: 43.5%;
+    top: 18.5%;
+    width: min(34vw, 66svh);
+  }
+  .home-hero__item--parts.is-main {
+    left: 43%;
+    top: 18.5%;
+    width: min(34vw, 66svh);
+    min-height: 0;
+  }
+  .home-hero__ground {
+    bottom: -25%;
+  }
+  .home-hero__ground img {
+    width: 118%;
+    margin-left: -9%;
+  }
+  .home-hero__manifest {
+    top: 13.7%;
+    right: 3.4%;
+    font-size: 9px;
+  }
+  .home-hero__benefits {
+    left: 4.35%;
+    bottom: 16.2%;
+  }
+  .home-hero__benefit {
+    min-width: 146px;
+    min-height: 44px;
+    padding-inline: 15px;
+    gap: 9px;
+  }
+  .home-hero__benefit svg {
+    width: 22px;
+    height: 22px;
+    flex-basis: 22px;
+  }
+  .home-hero__benefit strong {
+    font-size: 9.5px;
+  }
+  .home-hero__benefit small {
+    font-size: 8px;
+  }
+  .home-hero__progress {
+    bottom: 13.8%;
+  }
+  .home-hero__tabs {
+    width: min(64vw, 900px);
+    height: 76px;
+    bottom: 1.8%;
+  }
+  .home-hero__tab {
+    gap: 8px;
+    padding-inline: 10px;
+  }
+  .home-hero__tab-media {
+    width: 56px;
+    height: 52px;
+    flex-basis: 56px;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 68px;
+    flex-basis: 68px;
+  }
+  .home-hero__tab strong {
+    font-size: 9px;
+    padding-bottom: 8px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+  .home-hero__content {
+    left: 3.8%;
+    top: 13.2%;
+    width: 52vw;
+  }
+  .home-hero__title {
+    font-size: clamp(46px, 5.2vw, 62px);
+    line-height: 0.88;
+  }
+  .home-hero__title span:nth-of-type(2) {
+    font-size: 0.94em;
+  }
+  .home-hero__copy {
+    width: 92%;
+    max-width: 460px;
+    margin-top: 10px;
+    font-size: 12.5px;
+  }
+  .home-hero__actions {
+    gap: 7px;
+    margin-top: 12px;
+  }
+  .home-hero__button {
+    min-height: 42px;
+    padding-inline: 15px;
+    font-size: 9px;
+  }
+  .home-hero__item.is-main {
+    left: 41%;
+    top: 15.5%;
+    width: min(39vw, 64svh);
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 11%;
+    width: min(13.5vw, 170px);
+  }
+  .home-hero__item.is-prev {
+    left: 4.2%;
+  }
+  .home-hero__item.is-next {
+    left: calc(100% - min(13.5vw, 170px) - 3.2%);
+  }
+  .home-hero__item--rider.is-main {
+    left: 44%;
+    top: 19%;
+    width: min(36vw, 61svh);
+  }
+  .home-hero__item--parts.is-main {
+    left: 43.5%;
+    top: 20%;
+    width: min(36vw, 61svh);
+    min-height: 0;
+  }
+  .home-hero__ground {
+    bottom: -18%;
+  }
+  .home-hero__ground img {
+    width: 126%;
+    margin-left: -13%;
+  }
+  .home-hero__manifest {
+    top: 13%;
+    right: 2.4%;
+    padding-right: 15px;
+    font-size: 8px;
+  }
+  .home-hero__benefits {
+    left: 3.8%;
+    bottom: 15.7%;
+  }
+  .home-hero__benefit {
+    min-width: 124px;
+    min-height: 40px;
+    padding-inline: 11px;
+    gap: 7px;
+  }
+  .home-hero__benefit svg {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+  .home-hero__benefit strong {
+    font-size: 8.5px;
+  }
+  .home-hero__benefit small {
+    font-size: 7.5px;
+  }
+  .home-hero__progress {
+    bottom: 13.6%;
+  }
+  .home-hero__progress span {
+    width: 34px;
+    height: 3px;
+  }
+  .home-hero__progress span.is-active {
+    width: 46px;
+  }
+  .home-hero__tabs {
+    width: 94%;
+    height: 72px;
+    bottom: 1.5%;
+  }
+  .home-hero__tab {
+    gap: 6px;
+    padding: 4px 7px;
+  }
+  .home-hero__tab-media {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 58px;
+    flex-basis: 58px;
+  }
+  .home-hero__tab strong {
+    font-size: 8px;
+    padding-bottom: 7px;
+  }
+  .home-hero__arrow {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 900px) {
+  .home-hero {
+    height: 100svh;
+    min-height: 0;
+    max-height: 100svh;
+  }
+  .home-hero__background {
+    background: linear-gradient(180deg, rgba(247, 247, 243, 0.74) 0%, rgba(247, 247, 243, 0.28) 25%, rgba(247, 247, 243, 0.03) 58%), url("../img/home-hero.webp") 58% 50%/cover no-repeat;
+  }
+  .home-hero__slash {
+    top: -7%;
+    height: 86%;
+  }
+  .home-hero__slash--acid {
+    left: 122%;
+    width: 6.4%;
+  }
+  .home-hero__slash--dark {
+    left: 78%;
+    width: 18%;
+  }
+  .home-hero__manifest,
+  .home-hero__benefits {
+    display: none;
+  }
+  .home-hero__content {
+    left: clamp(14px, 2.4vw, 22px);
+    right: clamp(14px, 2.4vw, 22px);
+    top: clamp(82px, 10.5svh, 102px);
+    width: auto;
+  }
+  .home-hero__title {
+    width: min(96%, 720px);
+    font-size: clamp(44px, 7.4vw, 64px);
+    line-height: 0.88;
+    transform: skewX(-7deg) scaleX(1.01);
+  }
+  .home-hero__title span,
+  .home-hero__title strong {
+    margin-left: -6px;
+    padding-inline: 6px;
+    white-space: normal;
+  }
+  .home-hero__title span:nth-of-type(2) {
+    font-size: 0.94em;
+  }
+  .home-hero__title span {
+    background-size: 920px auto;
+  }
+  .home-hero__title strong {
+    margin-top: 2px;
+    background-size: auto, 780px auto;
+  }
+  .home-hero__copy {
+    width: min(72vw, 430px);
+    max-width: none;
+    margin-top: clamp(8px, 1.4svh, 13px);
+    font-size: clamp(11.5px, 1.7vw, 13px);
+    line-height: 1.28;
+  }
+  .home-hero__copy br {
+    display: none;
+  }
+  .home-hero__actions {
+    width: min(76vw, 430px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: clamp(9px, 1.5svh, 13px);
+  }
+  .home-hero__button {
+    width: 100%;
+    min-height: 42px;
+    padding-inline: 12px;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  .home-hero__scene {
+    inset: 0;
+  }
+  .home-hero__item.is-main {
+    left: 50%;
+    top: clamp(20rem, 38svh, 25rem);
+    width: min(76vw, 62svh, 590px);
+    transform: translateX(-50%);
+  }
+  .home-hero__item.is-main:hover {
+    transform: translateX(-50%);
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next,
+  .home-hero__item.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .home-hero__item--rider.is-main {
+    left: 50%;
+    top: clamp(20rem, 37svh, 24.5rem);
+    width: min(72vw, 60svh, 540px);
+  }
+  .home-hero__item--parts.is-main {
+    left: 50%;
+    top: clamp(20.5rem, 40svh, 25.5rem);
+    width: min(80vw, 62svh, 580px);
+    height: auto;
+    min-height: 0;
+  }
+  .home-hero__ground {
+    bottom: clamp(58px, 7.5svh, 78px);
+    z-index: 8;
+  }
+  .home-hero__ground img {
+    width: 178%;
+    margin-left: -39%;
+  }
+  .home-hero__progress {
+    left: 50%;
+    bottom: calc(96px + env(safe-area-inset-bottom));
+    gap: 6px;
+  }
+  .home-hero__progress span {
+    width: 26px;
+    height: 3px;
+  }
+  .home-hero__progress span.is-active {
+    width: 38px;
+  }
+  .home-hero__tabs {
+    left: clamp(8px, 1.5vw, 14px);
+    right: clamp(8px, 1.5vw, 14px);
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    width: auto;
+    height: 78px;
+    padding: 4px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 14px;
+    transform: none;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    scroll-padding-inline: 12px;
+  }
+  .home-hero__tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .home-hero__tab {
+    flex: 0 0 148px;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+  }
+  .home-hero__tab.is-active {
+    flex: 0 0 162px;
+    border-radius: 13px;
+  }
+  .home-hero__tab-media {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 56px;
+    flex-basis: 56px;
+  }
+  .home-hero__tab strong {
+    padding-bottom: 8px;
+    font-size: 8.5px;
+  }
+  .home-hero__tab strong::after {
+    width: 22px;
+    height: 2px;
+  }
+  .home-hero__arrow {
+    top: 54%;
+    bottom: auto;
+    width: 40px;
+    height: 40px;
+  }
+  .home-hero__arrow--prev {
+    left: 10px;
+  }
+  .home-hero__arrow--next {
+    right: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .home-hero__content {
+    left: 10px;
+    right: 10px;
+    top: clamp(76px, 10.2svh, 90px);
+  }
+  .home-hero__title {
+    width: 100%;
+    font-size: clamp(34px, 9.8vw, 48px);
+    line-height: 0.89;
+  }
+  .home-hero__title span:nth-of-type(2) {
+    font-size: 0.88em;
+  }
+  .home-hero__copy {
+    width: min(88%, 360px);
+    margin-top: 8px;
+    font-size: clamp(10.5px, 3vw, 12px);
+  }
+  .home-hero__actions {
+    width: 100%;
+    max-width: 390px;
+    gap: 6px;
+    margin-top: 9px;
+  }
+  .home-hero__button {
+    min-height: 40px;
+    padding-inline: 8px;
+    font-size: clamp(8px, 2.35vw, 9.5px);
+  }
+  .home-hero__item.is-main {
+    top: clamp(16.5rem, 40svh, 22rem);
+    width: min(94vw, 66svh, 520px);
+  }
+  .home-hero__item--rider.is-main {
+    top: clamp(16.5rem, 39svh, 21.5rem);
+    width: min(92vw, 64svh, 490px);
+  }
+  .home-hero__item--parts.is-main {
+    top: clamp(17rem, 42svh, 22.5rem);
+    width: min(96vw, 66svh, 520px);
+  }
+  .home-hero__ground {
+    bottom: clamp(54px, 7svh, 68px);
+  }
+  .home-hero__ground img {
+    width: 220%;
+    margin-left: -60%;
+  }
+  .home-hero__progress {
+    bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+  .home-hero__tabs {
+    left: 7px;
+    right: 7px;
+    bottom: calc(6px + env(safe-area-inset-bottom));
+    height: 72px;
+    padding: 4px;
+  }
+  .home-hero__tab {
+    flex-basis: 136px;
+    padding-inline: 7px;
+  }
+  .home-hero__tab.is-active {
+    flex-basis: 150px;
+  }
+  .home-hero__tab-media {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 50px;
+    flex-basis: 50px;
+  }
+  .home-hero__tab strong {
+    font-size: 8px;
+    padding-bottom: 7px;
+  }
+  .home-hero__arrow {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .home-hero__title {
+    font-size: clamp(32px, 9.5vw, 41px);
+  }
+  .home-hero__copy {
+    width: 94%;
+  }
+  .home-hero__item.is-main {
+    width: min(96vw, 64svh, 460px);
+  }
+  .home-hero__item--rider.is-main {
+    width: min(96vw, 62svh, 450px);
+  }
+  .home-hero__item--parts.is-main {
+    width: min(98vw, 65svh, 470px);
+  }
+  .home-hero__tabs {
+    height: 70px;
+  }
+  .home-hero__tab {
+    flex-basis: 130px;
+  }
+  .home-hero__tab.is-active {
+    flex-basis: 142px;
+  }
+}
+@media (max-width: 640px) and (max-height: 700px) and (orientation: portrait) {
+  .home-hero__content {
+    top: 72px;
+  }
+  .home-hero__title {
+    font-size: clamp(30px, 9vw, 36px);
+  }
+  .home-hero__copy {
+    display: none;
+  }
+  .home-hero__actions {
+    margin-top: 8px;
+  }
+  .home-hero__button {
+    min-height: 38px;
+  }
+  .home-hero__item.is-main {
+    top: 38svh;
+    width: min(82vw, 58svh);
+  }
+  .home-hero__item--rider.is-main {
+    top: 37svh;
+    width: min(80vw, 56svh);
+  }
+  .home-hero__item--parts.is-main {
+    top: 40svh;
+    width: min(86vw, 59svh);
+  }
+  .home-hero__ground {
+    display: none;
+  }
+  .home-hero__progress {
+    bottom: calc(82px + env(safe-area-inset-bottom));
+  }
+  .home-hero__tabs {
+    height: 66px;
+  }
+  .home-hero__tab-media {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 46px;
+    flex-basis: 46px;
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 620px) {
+  .home-hero {
+    height: 100svh;
+    min-height: 0;
+    max-height: 100svh;
+  }
+  .home-hero__content {
+    left: 18px;
+    right: auto;
+    top: clamp(64px, 12svh, 76px);
+    width: 42%;
+  }
+  .home-hero__title {
+    width: 100%;
+    font-size: clamp(30px, 5.2vw, 46px);
+    line-height: 0.88;
+  }
+  .home-hero__title span:nth-of-type(2) {
+    font-size: 0.92em;
+  }
+  .home-hero__copy {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 7px;
+    font-size: 10.5px;
+  }
+  .home-hero__actions {
+    width: min(100%, 310px);
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .home-hero__button {
+    min-height: 36px;
+    padding-inline: 8px;
+    font-size: 7.5px;
+  }
+  .home-hero__item.is-main {
+    left: 66%;
+    top: 13svh;
+    width: min(48vw, 82svh);
+  }
+  .home-hero__item--rider.is-main {
+    left: 66%;
+    top: 15svh;
+    width: min(43vw, 76svh);
+  }
+  .home-hero__item--parts.is-main {
+    left: 66%;
+    top: 18svh;
+    width: min(44vw, 78svh);
+  }
+  .home-hero__ground {
+    bottom: -18%;
+  }
+  .home-hero__ground img {
+    width: 142%;
+    margin-left: -21%;
+  }
+  .home-hero__progress,
+  .home-hero__manifest {
+    display: none;
+  }
+  .home-hero__tabs {
+    left: 50%;
+    right: auto;
+    bottom: 6px;
+    width: min(88%, 820px);
+    height: 58px;
+    transform: translateX(-50%);
+  }
+  .home-hero__tab {
+    flex-basis: 126px;
+  }
+  .home-hero__tab.is-active {
+    flex-basis: 138px;
+  }
+  .home-hero__tab-media {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+  .home-hero__tab.is-active .home-hero__tab-media {
+    width: 44px;
+    flex-basis: 44px;
+  }
+  .home-hero__tab strong {
+    font-size: 7.5px;
+    padding-bottom: 6px;
+  }
+  .home-hero__arrow {
+    display: grid;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .home-hero__ground {
+    bottom: -15.75vw;
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: 13.7vw;
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 4.8vw;
+  }
+  .home-hero__item--rider.is-main {
+    top: auto;
+    bottom: 10vw;
+  }
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: 10.7vw;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1919px) and (max-height: 780px) {
+  .home-hero__ground {
+    bottom: -13.5vw;
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: 7.6vw;
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 3.7vw;
+  }
+  .home-hero__item--rider.is-main,
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: 5.2vw;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1440px) {
+  .home-hero__ground {
+    bottom: -14.1vw;
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: 12.6vw;
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 5.35vw;
+  }
+  .home-hero__item--rider.is-main,
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: 11.8vw;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1440px) and (max-height: 700px) {
+  .home-hero__ground {
+    bottom: -11vw;
+  }
+  .home-hero__item.is-main {
+    bottom: 8vw;
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 4.2vw;
+  }
+  .home-hero__item--rider.is-main,
+  .home-hero__item--parts.is-main {
+    bottom: 6.8vw;
+  }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+  .home-hero__ground {
+    bottom: -10.1vw;
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: 9.4vw;
+  }
+  .home-hero__item.is-prev,
+  .home-hero__item.is-next {
+    bottom: 6.2vw;
+  }
+  .home-hero__item--rider.is-main {
+    top: auto;
+    bottom: 11.3vw;
+  }
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: 10.7vw;
+  }
+}
+@media (min-width: 641px) and (max-width: 900px) and (orientation: portrait) {
+  .home-hero__ground {
+    bottom: clamp(54px, 8.5vw, 76px);
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: clamp(54px, 8.5vw, 76px);
+  }
+  .home-hero__item--rider.is-main {
+    top: auto;
+    bottom: clamp(44px, 6vw, 58px);
+  }
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: clamp(22px, 3.5vw, 34px);
+  }
+}
+@media (max-width: 640px) and (orientation: portrait) {
+  .home-hero__ground {
+    display: none;
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: clamp(72px, 270px - 31vw, 150px);
+  }
+  .home-hero__item--rider.is-main {
+    top: auto;
+    bottom: clamp(62px, 238px - 27vw, 132px);
+  }
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: clamp(24px, 150px - 20vw, 80px);
+  }
+}
+@media (max-width: 640px) and (max-height: 700px) and (orientation: portrait) {
+  .home-hero__ground {
+    bottom: clamp(46px, 14vw, 58px);
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: clamp(72px, 23vw, 96px);
+  }
+  .home-hero__item--rider.is-main {
+    top: auto;
+    bottom: clamp(62px, 20vw, 84px);
+  }
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: clamp(22px, 8vw, 42px);
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 620px) {
+  .home-hero__ground {
+    bottom: -8.3vw;
+  }
+  .home-hero__item.is-main {
+    top: auto;
+    bottom: 3.5vw;
+  }
+  .home-hero__item--rider.is-main {
+    top: auto;
+    bottom: 2.8vw;
+  }
+  .home-hero__item--parts.is-main {
+    top: auto;
+    bottom: 1.6vw;
   }
 }

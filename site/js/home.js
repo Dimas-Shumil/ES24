@@ -39,6 +39,7 @@
 
   const items = [...hero.querySelectorAll('[data-home-item]')];
   const tabs = [...hero.querySelectorAll('[data-home-tab]')];
+  const tabsRail = hero.querySelector('.home-hero__tabs');
   const progress = [...hero.querySelectorAll('[data-home-progress] span')];
   const prev = hero.querySelector('[data-home-prev]');
   const next = hero.querySelector('[data-home-next]');
@@ -51,9 +52,26 @@
 
   let active = 0;
   let locked = false;
-  let touchStartX = 0;
+  let touchStartX = null;
+  let touchStartY = null;
+  let touchBlocked = false;
 
   const mod = (value) => (value + slides.length) % slides.length;
+
+
+  const centerMobileTab = (index, behavior = 'smooth') => {
+    if (!tabsRail || window.innerWidth > 900) return;
+
+    const tab = tabs[index];
+    if (!tab) return;
+
+    const target = Math.max(
+      0,
+      tab.offsetLeft - (tabsRail.clientWidth - tab.offsetWidth) / 2,
+    );
+
+    tabsRail.scrollTo({ left: target, behavior });
+  };
 
   const setPositions = () => {
     items.forEach((item, index) => {
@@ -83,6 +101,10 @@
         const isActive = tabIndex === index;
         tab.classList.toggle('is-active', isActive);
         tab.setAttribute('aria-pressed', String(isActive));
+      });
+
+      requestAnimationFrame(() => {
+        centerMobileTab(index, animate ? 'smooth' : 'auto');
       });
 
       progress.forEach((bar, barIndex) => {
@@ -133,7 +155,18 @@
   hero.addEventListener(
     'touchstart',
     (event) => {
+      touchBlocked = Boolean(
+        event.target.closest('.home-hero__tabs, .home-hero__actions, .home-hero__arrow'),
+      );
+
+      if (touchBlocked) {
+        touchStartX = null;
+        touchStartY = null;
+        return;
+      }
+
       touchStartX = event.changedTouches[0].clientX;
+      touchStartY = event.changedTouches[0].clientY;
     },
     { passive: true },
   );
@@ -141,9 +174,20 @@
   hero.addEventListener(
     'touchend',
     (event) => {
-      const diff = touchStartX - event.changedTouches[0].clientX;
-      if (Math.abs(diff) < 48) return;
-      changeSlide(active + (diff > 0 ? 1 : -1));
+      if (touchBlocked || touchStartX === null || touchStartY === null) {
+        touchBlocked = false;
+        return;
+      }
+
+      const diffX = touchStartX - event.changedTouches[0].clientX;
+      const diffY = touchStartY - event.changedTouches[0].clientY;
+
+      touchStartX = null;
+      touchStartY = null;
+      touchBlocked = false;
+
+      if (Math.abs(diffX) < 48 || Math.abs(diffX) <= Math.abs(diffY) * 1.15) return;
+      changeSlide(active + (diffX > 0 ? 1 : -1));
     },
     { passive: true },
   );
