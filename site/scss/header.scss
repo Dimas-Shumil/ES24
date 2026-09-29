@@ -1485,65 +1485,117 @@ $header-line: rgba(255, 255, 255, 0.18);
 
 // ============================================================
 // REAL BRAND LOGO
-// Replaces the temporary ES24 text lockup with site/img/logo.webp.
-// Height-based sizing keeps the logo proportional to the header.
+// Enlarged logo for better readability on the dark/glass header.
+// Uses site/img/logo.webp.
 // ============================================================
 .site-header__logo {
+  min-width: 132px;
   line-height: 0;
 }
 
 .site-header__logo-image {
   display: block;
   width: auto;
-  height: 38px;
-  max-width: 118px;
+  height: 50px;
+  max-width: 132px;
   object-fit: contain;
   object-position: left center;
+
+  transition: height 0.36s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.site-header--scrolled .site-header__logo-image {
+  height: 46px;
+}
+
+// Large desktop: scale with viewport, but do not let the logo become huge.
 @media (min-width: 1921px) {
+  .site-header__logo {
+    min-width: clamp(132px, 6.7vw, 184px);
+  }
+
   .site-header__logo-image {
-    height: min(1.98vw, 5.6vh);
+    height: clamp(54px, 2.65vw, 74px);
     max-width: none;
+  }
+
+  .site-header--scrolled .site-header__logo-image {
+    height: clamp(50px, 2.4vw, 68px);
+  }
+}
+
+// Very wide / short desktop: respect viewport height so the logo
+// never pushes outside the header.
+@media (min-width: 1921px) and (min-aspect-ratio: 57 / 20) {
+  .site-header__logo {
+    min-width: min(18.5vh, 148px);
+  }
+
+  .site-header__logo-image {
+    height: min(7.25vh, 56px);
+  }
+
+  .site-header--scrolled .site-header__logo-image {
+    height: min(6.65vh, 52px);
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1920px) {
+  .site-header__logo {
+    min-width: 132px;
+  }
+
+  .site-header__logo-image {
+    height: 50px;
+    max-width: 132px;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1180px) {
+  .site-header__logo {
+    min-width: 112px;
+  }
+
   .site-header__logo-image {
-    height: 35px;
-    max-width: 104px;
+    height: 43px;
+    max-width: 112px;
+  }
+
+  .site-header--scrolled .site-header__logo-image {
+    height: 40px;
   }
 }
 
 @media (max-width: 900px) {
   .site-header__logo {
-    min-width: 82px;
+    min-width: 98px;
   }
 
   .site-header__logo-image {
-    height: 32px;
-    max-width: 82px;
+    height: 40px;
+    max-width: 98px;
   }
 }
 
 @media (max-width: 480px) {
   .site-header__logo {
-    min-width: 72px;
+    min-width: 88px;
   }
 
   .site-header__logo-image {
-    height: 29px;
-    max-width: 72px;
+    height: 36px;
+    max-width: 88px;
   }
 }
 
 @media (max-width: 360px) {
   .site-header__logo {
-    min-width: 66px;
+    min-width: 80px;
   }
 
   .site-header__logo-image {
-    height: 27px;
-    max-width: 66px;
+    height: 33px;
+    max-width: 80px;
   }
 }
+

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -42,6 +43,7 @@ button {
   overflow: hidden;
   isolation: isolate;
   background: #f7f7f3;
+  overflow: hidden;
 }
 
 .hero-rail {
@@ -1171,6 +1173,7 @@ button {
   }
   .hero-rocks {
     width: 38%;
+    display: none;
   }
   .hero-adventages__block {
     min-height: 76px;
@@ -2064,5 +2067,438 @@ button {
   }
   .second__thumb span {
     font-size: 7px;
+  }
+}
+@media (min-width: 1921px) {
+  .hero,
+  .second {
+    height: 100svh;
+    min-height: 0;
+  }
+  /* Same horizontal rhythm as the home hero. */
+  .hero-content {
+    position: absolute;
+    left: 4.9%;
+    top: 3.3%;
+    width: 42vw;
+    margin-left: 0;
+    padding-top: 0;
+    gap: 0.72vw;
+  }
+  .hero-content__title {
+    gap: 0.22vw;
+  }
+  .hero-brand {
+    margin-left: 0.9vw;
+    padding-inline: 0.85vw;
+    font-size: 3.15vw;
+    line-height: 0.86;
+    letter-spacing: 0.045em;
+    background-size: 56.25vw auto;
+    transform: skewX(-9deg) scaleX(1.06);
+  }
+  .hero-model {
+    gap: 0.18vw;
+    margin-left: -1.05vw;
+    padding-inline: 1.05vw;
+    font-size: 8.7vw;
+    line-height: 0.79;
+    letter-spacing: 0.05vw;
+    transform: skewX(-8deg) scaleX(1.035);
+  }
+  .hero-model__name,
+  .hero-model__detail {
+    margin-left: -1.05vw;
+    padding-inline: 1.45vw;
+  }
+  .hero-model__name {
+    background-size: 56.25vw auto;
+  }
+  .hero-model__detail {
+    margin-top: 0.08vw;
+    font-size: 0.72em;
+    line-height: 0.74;
+    letter-spacing: 0.08vw;
+    background-size: auto, 46.875vw auto;
+  }
+  .hero-slogan {
+    width: 17.2vw;
+    padding-bottom: 0.78vw;
+    font-size: 1vw;
+    line-height: 1.12;
+    letter-spacing: 0.065em;
+  }
+  .hero-slogan::after {
+    width: 2.4vw;
+    height: 0.18vw;
+  }
+  /* Buttons use the same scale as the home-page CTA. */
+  .hero-content__actions {
+    gap: 0.625vw;
+    padding-left: 0;
+  }
+  .primary,
+  .podobrat {
+    height: 2.604vw;
+    font-size: 0.625vw;
+  }
+  .primary {
+    width: 13.9vw;
+    gap: 0.9vw;
+  }
+  .primary svg {
+    width: 0.94vw;
+    height: 0.73vw;
+  }
+  .podobrat {
+    width: 13vw;
+  }
+  /* Specs and review sit on the same content grid, not their own scale. */
+  .hero-adventages,
+  .hero-obzor {
+    width: 30.729vw;
+  }
+  .hero-adventages__block {
+    min-height: 4.15vw;
+    padding-right: 0.85vw;
+    gap: 0.3vw;
+  }
+  .hero-adventages__block + .hero-adventages__block {
+    padding-left: 1.05vw;
+  }
+  .hero-adventages__block + .hero-adventages__block::before {
+    top: 0.16vw;
+    bottom: 0.06vw;
+  }
+  .hero-adventages__icon {
+    width: 1.35vw;
+    height: 1.35vw;
+  }
+  .hero-adventages__block-text {
+    gap: 0.2vw;
+  }
+  .hero-adventages__block-text strong {
+    font-size: 1.16vw;
+  }
+  .hero-adventages__block-text strong small {
+    font-size: 0.52vw;
+  }
+  .hero-adventages__block-text > span {
+    font-size: 0.39vw;
+    line-height: 1.18;
+  }
+  .hero-obzor {
+    gap: 0.62vw;
+  }
+  .hero-obzor__button {
+    gap: 0.48vw;
+  }
+  .hero-obzor__icon {
+    width: 1.75vw;
+    height: 1.75vw;
+  }
+  .hero-obzor__icon svg {
+    width: 0.48vw;
+    height: 0.56vw;
+  }
+  .hero-obzor__button-text {
+    gap: 0.08vw;
+    font-size: 0.44vw;
+  }
+  .hero-obzor__gallery {
+    gap: 0.14vw;
+  }
+  .hero-obzor__image {
+    width: 2.85vw;
+    height: 2.2vw;
+  }
+  .hero-obzor__image img {
+    width: 9.4vw;
+  }
+  .hero-obzor__image--front img {
+    left: -2.1vw;
+    top: -2.98vw;
+  }
+  .hero-obzor__image--middle img {
+    left: -3.32vw;
+    top: -2.28vw;
+  }
+  .hero-obzor__image--rear img {
+    left: -5.25vw;
+    top: -2.1vw;
+  }
+  .hero-obzor__caption {
+    gap: 0.12vw;
+    font-size: 0.39vw;
+  }
+  /* Peripheral UI follows the same percentage placement as the home hero. */
+  .hero-rail {
+    top: 13.5%;
+    left: 1.2vw;
+    gap: 2.05vw;
+  }
+  .hero-rail__pages {
+    gap: 1.35vw;
+    padding-left: 1.25vw;
+  }
+  .hero-rail__pages::before {
+    top: 0.2vw;
+    bottom: 0.1vw;
+    left: 0.34vw;
+  }
+  .hero-rail__page {
+    min-width: 1.15vw;
+    font-size: 0.55vw;
+  }
+  .hero-rail__page::before {
+    left: -0.92vw;
+    width: 0.34vw;
+  }
+  .hero-rail__page--active::before {
+    width: 0.64vw;
+  }
+  .hero-rail__page--active::after {
+    top: -0.34vw;
+    left: -1.02vw;
+    width: 0.14vw;
+    height: 0.98vw;
+  }
+  .hero-rail__labels {
+    gap: 0.42vw;
+    font-size: 0.55vw;
+  }
+  .hero-manifest {
+    top: 13.5%;
+    right: 1.2vw;
+    padding-right: 1.25vw;
+  }
+  .hero-manifest::before {
+    right: 0.34vw;
+    height: 2.85vw;
+  }
+  .hero-manifest::after {
+    right: 1.25vw;
+    bottom: -0.82vw;
+    width: 0.94vw;
+    height: 0.15vw;
+  }
+  .hero-manifest__text {
+    gap: 0.31vw;
+    font-size: 0.55vw;
+  }
+  /* Physical scene: width-first, height-clamped exactly like the home hero. */
+  .hero-bike {
+    left: 33.2%;
+    bottom: 3.2%;
+    width: min(48vw, 88vh);
+  }
+  .hero-rocks {
+    left: 31.3%;
+    bottom: 0;
+    width: min(41vw, 80vh);
+  }
+  .hero-bike-smoke {
+    left: 27%;
+    bottom: 0;
+    width: min(60vw, 108vh);
+    height: min(36vw, 67vh);
+  }
+  .hero-backdrop__mountains::before {
+    top: max(-18.229vw, -34vh);
+    bottom: max(-6.25vw, -12vh);
+    transform: translateY(max(-2.604vw, -5vh));
+  }
+  .hero-backdrop__lower-info {
+    width: 7.813vw;
+  }
+  .hero-backdrop__lower-info::before {
+    left: -3.854vw;
+    top: 0.365vw;
+    width: 0.104vw;
+    height: 5.104vw;
+  }
+  .hero-backdrop__lower-model span,
+  .hero-backdrop__lower-model strong,
+  .hero-backdrop__lower-copy {
+    font-size: 0.625vw;
+  }
+  .hero-backdrop__lower-model {
+    gap: 0.208vw;
+  }
+  .hero-backdrop__lower-copy {
+    margin-top: 0.729vw;
+    padding-bottom: 0.99vw;
+  }
+  .hero-backdrop__lower-copy::after {
+    bottom: 0.26vw;
+    width: 1.198vw;
+    height: 0.156vw;
+  }
+  .hero-backdrop__mountain-panel::after,
+  .hero-backdrop__lower-cut::after {
+    width: 0.521vw;
+  }
+  /* Second section uses the same width-first / height-clamped strategy. */
+  .second__title {
+    font-size: 6.7vw;
+  }
+  .second__title-accent {
+    padding-right: 0.9vw;
+    background-size: auto, 48vw auto;
+  }
+  .second__decor--acid {
+    background-size: auto, 55vw auto;
+  }
+  .second__corner::before {
+    width: 0.44vw;
+  }
+  .second__bike-box {
+    width: min(42vw, 78vh);
+  }
+  .second__point {
+    width: 1.6vw;
+    height: 1.6vw;
+  }
+  .second__point span {
+    width: 0.42vw;
+    height: 0.42vw;
+    box-shadow: 0 0 0 0.14vw rgba(11, 12, 13, 0.96), 0 0 0.62vw rgba(223, 255, 0, 0.48);
+  }
+  .second__point::before {
+    width: 1.05vw;
+    height: 1.05vw;
+    border-width: 0.1vw;
+  }
+  .second__point::after {
+    width: 1.52vw;
+    height: 1.52vw;
+  }
+  .second__card,
+  .second__card--suspension,
+  .second__card--wheels {
+    width: 18vw;
+  }
+  .second__card {
+    min-height: 6.65vw;
+  }
+  .second__card-image {
+    min-height: 6.65vw;
+  }
+  .second__card-image img {
+    width: 13.8vw;
+  }
+  .second__card-body {
+    padding: 0.75vw 0.8vw 0.8vw;
+  }
+  .second__card-body h3 {
+    margin-bottom: 0.5vw;
+    padding-bottom: 0.46vw;
+    font-size: 0.94vw;
+  }
+  .second__card-body h3::after {
+    width: 1.4vw;
+    height: 0.14vw;
+  }
+  .second__card-body p {
+    font-size: 0.64vw;
+  }
+  .second__thumbs {
+    width: 37vw;
+    height: 4.75vw;
+    gap: 0.14vw;
+    padding: 0.42vw 0.66vw 0.46vw;
+    border-radius: 0.66vw;
+  }
+  .second__thumb span {
+    left: 0.8vw;
+    bottom: 0.42vw;
+    font-size: 0.56vw;
+  }
+}
+/* Same safety valve as the home page. 2048×760 stays in the normal
+   width-driven layout; only genuinely extreme wide/short displays switch. */
+@media (min-width: 1921px) and (min-aspect-ratio: 57/20) {
+  .hero-content {
+    width: 112vh;
+    top: 5.7%;
+    gap: 1.9vh;
+  }
+  .hero-brand {
+    margin-left: 2.55vh;
+    padding-inline: 2.42vh;
+    font-size: 8.95vh;
+  }
+  .hero-model {
+    gap: 0.51vh;
+    margin-left: -2.98vh;
+    padding-inline: 2.98vh;
+    font-size: 24.72vh;
+    letter-spacing: 0.14vh;
+  }
+  .hero-model__name,
+  .hero-model__detail {
+    margin-left: -2.98vh;
+    padding-inline: 4.12vh;
+  }
+  .hero-slogan {
+    width: 48.9vh;
+    padding-bottom: 2.22vh;
+    font-size: 2.84vh;
+  }
+  .hero-content__actions {
+    gap: 1.78vh;
+  }
+  .primary,
+  .podobrat {
+    height: 7.42vh;
+    font-size: 1.78vh;
+  }
+  .primary {
+    width: 39.55vh;
+  }
+  .podobrat {
+    width: 36.98vh;
+  }
+  .hero-adventages,
+  .hero-obzor {
+    width: 87.58vh;
+  }
+  .hero-adventages__block {
+    min-height: 11.82vh;
+  }
+  .hero-adventages__icon {
+    width: 3.84vh;
+    height: 3.84vh;
+  }
+  .hero-adventages__block-text strong {
+    font-size: 3.3vh;
+  }
+  .hero-adventages__block-text strong small {
+    font-size: 1.48vh;
+  }
+  .hero-adventages__block-text > span,
+  .hero-obzor__button-text,
+  .hero-obzor__caption {
+    font-size: 1.11vh;
+  }
+  .hero-obzor__icon {
+    width: 4.98vh;
+    height: 4.98vh;
+  }
+  .hero-obzor__image {
+    width: 8.11vh;
+    height: 6.26vh;
+  }
+  .hero-bike {
+    width: min(48vw, 88vh);
+  }
+  .hero-rocks {
+    width: min(41vw, 80vh);
+  }
+  .second__title {
+    font-size: 19.05vh;
+  }
+  .second__bike-box {
+    width: min(42vw, 78vh);
   }
 }

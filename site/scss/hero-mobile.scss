@@ -1,8 +1,8 @@
-// mobile hero layout
-
-$paper: #f7f7f3;
-$ink: #0b0c0d;
-$acid: #dfff00;
+/*
+ * Mobile product hero — Regulmoto Legend 300
+ * Visual target: supplied portrait reference.
+ * Desktop (>900px) is intentionally untouched.
+ */
 
 .hero-mobile-benefits {
   display: none;
@@ -10,181 +10,178 @@ $acid: #dfff00;
 
 @media (max-width: 900px) {
   .hero {
+    position: relative;
     height: 100svh;
     min-height: 680px;
-    background: $paper;
+    overflow: hidden;
+    isolation: isolate;
+    background: #f7f7f3;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 4;
-      height: 38%;
-      pointer-events: none;
-      background:
-        linear-gradient(
-          180deg,
-          rgba($ink, 0) 0%,
-          rgba($ink, 0.48) 24%,
-          rgba($ink, 0.9) 58%,
-          rgba($ink, 0.97) 100%
-        ),
-        radial-gradient(circle at 50% 18%, rgba($acid, 0.09), transparent 42%);
-    }
+  /* Dark lower stage: specs + CTA + benefits sit on one continuous base. */
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    height: 26.2%;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(11, 12, 13, 0) 0%, rgba(11, 12, 13, 0.7) 17%, rgba(11, 12, 13, 0.96) 42%, #0b0c0d 100%),
+      radial-gradient(circle at 48% 0%, rgba(223, 255, 0, 0.08), transparent 42%);
   }
 
   .hero-content {
     position: absolute;
     inset: 0;
-    z-index: 5;
-
+    z-index: 9;
     width: auto;
     margin: 0;
-    padding: 88px 16px 0;
-
+    padding: 0;
     display: block;
+    pointer-events: none;
   }
 
   .hero-content__title {
-    position: relative;
-    z-index: 2;
-    width: 100%;
+    position: absolute;
+    top: clamp(90px, 11.5svh, 118px);
+    left: clamp(15px, 4.1vw, 24px);
+    right: 12px;
+    z-index: 5;
+    width: auto;
+    margin: 0;
     gap: 0;
+    pointer-events: none;
   }
 
   .hero-brand {
-    margin: 0 0 5px 6px;
+    margin: 0 0 clamp(7px, 1.1svh, 12px) clamp(10px, 2.5vw, 18px);
     padding: 0;
-
-    font-size: clamp(30px, 7.8vw, 54px);
-    line-height: 0.92;
+    font-size: clamp(30px, 7.8vw, 43px);
+    line-height: 0.9;
     letter-spacing: 0.045em;
-
     background-size: 760px auto;
-    background-position: 42% 28%;
+    background-position: 43% 29%;
+    transform: skewX(-10deg) scaleX(1.08);
+    transform-origin: left center;
   }
 
   .hero-model {
-    gap: 0;
+    width: min-content;
     margin: 0;
     padding: 0;
-
-    font-size: clamp(82px, 22.5vw, 150px);
-    line-height: 0.72;
+    gap: 0;
+    font-size: clamp(92px, 27.4vw, 142px);
+    line-height: 0.7;
     letter-spacing: 0;
-
-    transform: skewX(-7deg) scaleX(1.025);
+    transform: skewX(-8deg) scaleX(1.045);
     transform-origin: left top;
   }
 
   .hero-model__name,
   .hero-model__detail {
     margin: 0;
-    padding: 0 7px;
+    padding: 0 clamp(5px, 1.8vw, 10px);
   }
 
   .hero-model__name {
     background-size: 800px auto;
-    background-position: 50% 36%;
+    background-position: 48% 36%;
   }
 
   .hero-model__detail {
-    margin-top: 2px;
-
-    font-size: 0.72em;
-    line-height: 0.78;
-    letter-spacing: 0.01em;
-
-    background-size:
-      auto,
-      720px auto;
-    background-position:
-      center,
-      35% 56%;
+    margin-top: clamp(2px, 0.45svh, 5px);
+    font-size: 0.67em;
+    line-height: 0.74;
+    letter-spacing: 0.005em;
+    background-size: auto, 720px auto;
+    background-position: center, 35% 56%;
   }
 
   .hero-slogan {
-    position: relative;
+    position: absolute;
+    top: clamp(244px, 30.5svh, 302px);
+    left: clamp(18px, 4.7vw, 28px);
     z-index: 9;
-
-    width: 230px;
-    margin: 12px 0 0 4px;
-    padding: 0 0 15px;
-
+    width: 210px;
+    margin: 0;
+    padding: 0 0 14px;
     font-size: 0;
+    pointer-events: none;
   }
 
   .hero-slogan::before {
     content: 'НЕ ДЛЯ ТОГО,\A ЧТОБЫ СТОЯТЬ.';
     display: block;
     white-space: pre;
-
-    color: $ink;
+    color: #0b0c0d;
     font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
-    font-size: clamp(17px, 4.8vw, 25px);
-    line-height: 1.25;
+    font-size: clamp(17px, 4.7vw, 23px);
+    line-height: 1.16;
     font-weight: 900;
     font-style: italic;
-    letter-spacing: 0.055em;
+    letter-spacing: 0.045em;
   }
 
   .hero-slogan::after {
-    left: 1px;
+    left: 0;
     bottom: 0;
-    width: 42px;
+    width: 40px;
     height: 4px;
+    background: #dfff00;
   }
 
+  /* Right-side copy from the reference. */
   .hero-manifest {
-    top: 92px;
-    right: 15px;
+    top: clamp(92px, 11.7svh, 118px);
+    right: clamp(12px, 3.4vw, 20px);
     z-index: 9;
-
     padding-right: 15px;
-    color: rgba($paper, 0.64);
+    color: rgba(247, 247, 243, 0.76);
   }
 
   .hero-manifest::before {
     right: 0;
-    height: 50px;
-    background: rgba($paper, 0.48);
+    height: 51px;
+    background: rgba(247, 247, 243, 0.42);
   }
 
   .hero-manifest::after {
     right: 14px;
-    bottom: -14px;
+    bottom: -13px;
     width: 16px;
+    height: 3px;
+    background: #dfff00;
   }
 
   .hero-manifest__text {
-    gap: 5px;
-    font-size: 9px;
-    letter-spacing: 0.17em;
+    gap: 4px;
+    font-size: clamp(7px, 1.85vw, 9px);
+    line-height: 1;
+    letter-spacing: 0.18em;
   }
 
   .hero-rail {
-    top: 300px;
-    right: 15px;
+    top: clamp(265px, 33.4svh, 330px);
+    right: clamp(12px, 3.4vw, 20px);
     left: auto;
     z-index: 9;
-
     gap: 0;
-    padding-right: 14px;
-
-    color: rgba($paper, 0.82);
+    padding-right: 15px;
+    color: rgba(63, 66, 69, 0.82);
     text-align: right;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      right: 0;
-      width: 1px;
-      height: 76px;
-      background: rgba($paper, 0.46);
-    }
+  .hero-rail::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 0;
+    width: 1px;
+    height: 72px;
+    background: rgba(11, 12, 13, 0.24);
   }
 
   .hero-rail__pages {
@@ -193,199 +190,185 @@ $acid: #dfff00;
 
   .hero-rail__labels {
     align-items: flex-end;
-    gap: 6px;
-
-    font-size: 9px;
+    gap: 5px;
+    font-size: clamp(7px, 1.85vw, 9px);
     line-height: 1;
     letter-spacing: 0.15em;
+    color: #f7f7f3;
   }
 
   .hero-rail__labels::after {
     content: '';
-    width: 22px;
+    width: 21px;
     height: 3px;
     margin-top: 6px;
-    background: $acid;
+    background: #dfff00;
+  }
+
+  /* Background rebuilt for the portrait reference: white field, mountains, dark diagonal right block. */
+  .hero-backdrop {
+    z-index: 1;
+    overflow: hidden;
   }
 
   .hero-backdrop__mountains {
-    left: -24%;
-    right: -20%;
-    bottom: 23%;
-
-    height: 54%;
-
-    mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 88%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 88%, transparent 100%);
+    left: -32%;
+    right: -29%;
+    top: 12.5%;
+    bottom: auto;
+    height: 52%;
+    overflow: hidden;
+    opacity: 0.84;
+    mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 100%);
   }
 
   .hero-backdrop__mountains::before {
-    top: -14%;
-    bottom: -10%;
-
-    background-position: 58% 56%;
+    left: 0;
+    // left: 50%;
+    right: 0;
+    top: -10%;
+    bottom: -8%;
+    // background: url('../img/hero-back.webp') 52% 52% / cover no-repeat;
     transform: none;
-
-    opacity: 0.7;
-    filter: saturate(0.7) contrast(1.05) brightness(1.08);
+    opacity: 0.78;
+    filter: grayscale(0.18) saturate(0.68) contrast(0.98) brightness(1.16);
   }
 
   .hero-backdrop__mountains::after {
-    background: linear-gradient(
-      180deg,
-      rgba($paper, 0.94) 0%,
-      rgba($paper, 0.54) 18%,
-      rgba($paper, 0.08) 50%,
-      rgba($paper, 0) 78%
-    );
+    content: none;
   }
 
   .hero-backdrop__right {
-    width: 72%;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 
-  .hero-backdrop__slash--black {
+  .hero-backdrop__right::before {
+    content: '';
+    position: absolute;
+    top: -7%;
+    // right: 5%;
+    left: 130%;
+    z-index: 1;
+    width: 31%;
+    height: 53%;
+    clip-path: polygon(47% 0, 100% 0, 100% 100%, 0 100%);
+    background:
+      linear-gradient(rgba(6, 8, 9, 0.52), rgba(6, 8, 9, 0.52));
+    filter: saturate(0.78) contrast(1.08);
+  }
+
+  .hero-backdrop__right::after {
+    content: '';
+    position: absolute;
     top: -8%;
-    right: 21%;
-
-    width: 41%;
-    height: 61%;
-
-    transform: skewX(-25deg);
+    // right: 18.5%;
+    left: 120%;
+    z-index: 2;
+    width: 10%;
+    height: 51%;
+    background: #dfff00;
+    transform: rotate(25deg);
+    transform-origin: 50% 0;
   }
 
-  .hero-backdrop__slash--black::before {
-    right: -95%;
-    bottom: -4%;
-
-    width: 430%;
-    height: 150%;
-
-    background-size:
-      100% 100%,
-      auto 165%;
-    background-position:
-      center,
-      33% 49%;
-
-    transform: skewX(25deg);
-  }
-
-  .hero-backdrop__slash--acid {
-    top: -9%;
-    right: 63%;
-
-    width: 4.6%;
-    height: 67%;
-
-    transform: skewX(-25deg);
-  }
-
-  .hero-backdrop__mountain-panel {
-    top: 5%;
-    right: -14%;
-
-    width: 67%;
-    height: 55%;
-
-    transform: skewX(-25deg);
-  }
-
-  .hero-backdrop__mountain-panel::before {
-    inset: -12% -82%;
-    background-position: 76% 22%;
-    transform: skewX(25deg) scale(1.08);
-    filter: saturate(0.74) contrast(1.1) brightness(0.78);
-  }
-
-  .hero-backdrop__mountain-panel::after {
-    width: 6px;
-    height: 29%;
-  }
-
+  .hero-backdrop__slash,
+  .hero-backdrop__mountain-panel,
   .hero-backdrop__rider-panel,
   .hero-backdrop__lower-cut,
   .hero-backdrop__lower-info {
     display: none;
   }
 
+  /* Bike is anchored to the same lower stage as the rocks, never floating. */
   .hero-bike {
-    top: clamp(258px, 35svh, 330px);
-    bottom: auto;
-    left: 50%;
-    z-index: 6;
-
-    width: min(102vw, 680px);
+    top: auto;
+    bottom: 22.2%;
+    left: 51%;
+    z-index: 7;
+    width: min(94vw, 448px);
     transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .hero-bike__image {
+    width: 100%;
+    height: auto;
+    filter: contrast(1.03) saturate(1.03);
   }
 
   .hero-rocks {
     left: 50%;
-    bottom: 198px;
-    z-index: 7;
-
-    width: min(112vw, 760px);
+    bottom: 18%;
+    z-index: 8;
+    width: min(136vw, 610px);
     overflow: visible;
     transform: translateX(-50%);
   }
 
+  .hero-rocks__image {
+    width: 100%;
+    height: auto;
+  }
+
   .hero-bike-smoke {
-    left: -4%;
-    bottom: 202px;
+    left: 50%;
+    bottom: 19.5%;
     z-index: 5;
-
-    width: 104%;
+    width: 126%;
     height: 44%;
-
-    opacity: 0.48;
+    opacity: 0.22;
+    transform: translateX(-50%);
   }
 
   .hero-bike-smoke::before,
   .hero-bike-smoke::after {
-    opacity: 0.18;
+    opacity: 0.12;
   }
 
+  /* Specs exactly form the four-cell row from the reference. */
   .hero-adventages {
     position: absolute;
-    left: 8px;
-    right: 8px;
-    bottom: 150px;
+    left: 7px;
+    right: 7px;
+    bottom: 13.2%;
     z-index: 10;
-
     width: auto;
     margin: 0;
-    padding: 13px 0 11px;
-
+    padding: 8px 0 9px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    pointer-events: auto;
   }
 
   .hero-adventages__block {
     min-width: 0;
-    min-height: 82px;
-    padding: 0 6px;
-
+    min-height: 72px;
+    padding: 0 5px;
     align-items: center;
     justify-content: flex-start;
-    gap: 7px;
-
+    gap: 6px;
     text-align: center;
   }
 
   .hero-adventages__block + .hero-adventages__block {
-    padding-left: 6px;
+    padding-left: 5px;
   }
 
   .hero-adventages__block + .hero-adventages__block::before {
-    top: 5px;
+    top: 4px;
     bottom: 3px;
-    background: rgba($paper, 0.26);
+    background: rgba(247, 247, 243, 0.26);
   }
 
   .hero-adventages__icon {
-    width: 28px;
-    height: 28px;
-    stroke: $acid;
-    stroke-width: 2.3;
+    width: clamp(25px, 6.6vw, 31px);
+    height: clamp(25px, 6.6vw, 31px);
+    stroke: #dfff00;
+    stroke-width: 2.25;
   }
 
   .hero-adventages__block-text {
@@ -395,33 +378,45 @@ $acid: #dfff00;
   }
 
   .hero-adventages__block-text strong {
-    color: $paper;
-    font-size: clamp(20px, 5.7vw, 31px);
-    line-height: 0.95;
+    color: #f7f7f3;
+    font-size: clamp(20px, 5.8vw, 29px);
+    line-height: 0.94;
     white-space: nowrap;
   }
 
   .hero-adventages__block-text strong small {
-    color: $paper;
-    font-size: 11px;
+    color: #f7f7f3;
+    font-size: 10px;
   }
 
   .hero-adventages__block-text > span {
-    color: rgba($paper, 0.74);
-    font-size: clamp(7px, 2.15vw, 10px);
-    line-height: 1.18;
-    letter-spacing: 0.05em;
+    color: rgba(247, 247, 243, 0.72);
+    font-size: clamp(6.2px, 1.75vw, 8.7px);
+    line-height: 1.2;
+    letter-spacing: 0.055em;
   }
 
+  .hero-adventages__block:nth-child(4) .hero-adventages__block-text > span {
+    font-size: 0;
+  }
+
+  .hero-adventages__block:nth-child(4) .hero-adventages__block-text > span::after {
+    content: 'ДОКУМЕНТЫ\A ДЛЯ ДОРОГИ';
+    white-space: pre;
+    font-size: clamp(6.2px, 1.75vw, 8.7px);
+    line-height: 1.2;
+  }
+
+  /* One CTA only, as in the reference. */
   .hero-content__actions {
     position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 76px;
+    left: clamp(14px, 4vw, 22px);
+    right: clamp(14px, 4vw, 22px);
+    bottom: 5.25%;
     z-index: 11;
-
     display: block;
     padding: 0;
+    pointer-events: auto;
   }
 
   .podobrat {
@@ -430,266 +425,282 @@ $acid: #dfff00;
 
   .primary {
     width: 100%;
-    height: 58px;
-
-    justify-content: center;
-    gap: 0;
-
-    font-size: clamp(14px, 4vw, 18px);
-    letter-spacing: 0.025em;
-
+    height: clamp(48px, 6.35svh, 58px);
+    padding: 0 clamp(20px, 6vw, 34px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background: #dfff00;
+    color: #0b0c0d;
     clip-path: polygon(2.6% 0, 97.4% 0, 100% 50%, 97.4% 100%, 2.6% 100%, 0 50%);
+    font-size: clamp(14px, 3.8vw, 18px);
+    line-height: 1;
+    letter-spacing: 0.03em;
   }
 
   .primary svg {
-    display: none;
+    display: block;
+    width: 22px;
+    height: 18px;
+    fill: #0b0c0d;
+    flex: 0 0 auto;
   }
 
   .hero-obzor {
     display: none;
   }
 
+  /* Bottom three promises from the reference. */
   .hero-mobile-benefits {
     position: absolute;
-    left: 7px;
-    right: 7px;
-    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 0.6%;
     z-index: 11;
-
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
-
-    min-height: 60px;
+    min-height: clamp(48px, 6.4svh, 58px);
+    pointer-events: none;
   }
 
   .hero-mobile-benefits__item {
     position: relative;
-
     min-width: 0;
-    padding: 0 7px;
-
+    padding: 0 clamp(7px, 2vw, 10px);
     display: grid;
-    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-columns: clamp(22px, 5.6vw, 27px) minmax(0, 1fr);
     align-items: center;
-    gap: 8px;
+    gap: clamp(5px, 1.7vw, 8px);
+  }
+
+  .hero-mobile-benefits__item::after {
+    content: '';
+    position: absolute;
+    inset: 4px 2px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    opacity: 0.9;
+    z-index: -1;
   }
 
   .hero-mobile-benefits__item + .hero-mobile-benefits__item::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 5px;
-    bottom: 5px;
+    top: 7px;
+    bottom: 7px;
     width: 1px;
-    background: rgba($paper, 0.28);
+    background: rgba(247, 247, 243, 0.34);
   }
 
   .hero-mobile-benefits__item svg {
-    width: 28px;
-    height: 28px;
-
+    width: clamp(20px, 5.4vw, 25px);
+    height: clamp(20px, 5.4vw, 25px);
     fill: none;
-    stroke: $paper;
-    stroke-width: 2;
+    stroke: #dfff00;
+    stroke-width: 2.1;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
 
   .hero-mobile-benefits__item span {
     min-width: 0;
-
-    color: rgba($paper, 0.86);
-    font-size: clamp(6.7px, 1.8vw, 9px);
-    line-height: 1.32;
+    color: rgba(247, 247, 243, 0.82);
+    font-size: clamp(5.8px, 1.48vw, 7.2px);
+    line-height: 1.22;
     font-weight: 700;
-    letter-spacing: 0.065em;
+    letter-spacing: 0.055em;
   }
 }
 
 @media (max-width: 560px) {
   .hero {
-    height: 100svh;
-    min-height: 650px;
+    min-height: 660px;
   }
 
-  .hero-content {
-    padding: 84px 12px 0;
+  .hero-content__title {
+    top: clamp(84px, 10.8svh, 101px);
+    left: 13px;
   }
 
   .hero-brand {
-    margin-left: 4px;
+    margin-left: 9px;
+    font-size: clamp(27px, 7.8vw, 35px);
   }
 
   .hero-model {
-    font-size: clamp(76px, 22.8vw, 112px);
+    font-size: clamp(88px, 28.5vw, 118px);
   }
 
   .hero-slogan {
-    width: 205px;
-    margin-top: 12px;
+    top: clamp(252px, 34svh, 284px);
+    left: 17px;
   }
 
   .hero-manifest {
-    top: 88px;
+    top: clamp(86px, 11svh, 102px);
     right: 11px;
   }
 
-  .hero-manifest__text,
-  .hero-rail__labels {
-    font-size: 8px;
-  }
-
   .hero-rail {
-    top: 286px;
+    top: clamp(246px, 31.7svh, 288px);
     right: 11px;
   }
 
   .hero-bike {
-    top: clamp(248px, 36svh, 286px);
-    left: 50%;
-    width: 104%;
-    transform: translateX(-50%);
+    bottom: 22.1%;
+    left: 51%;
+    width: 92vw;
   }
 
   .hero-rocks {
-    left: 50%;
-    bottom: 188px;
-    width: 116%;
-    transform: translateX(-50%);
-  }
-
-  .hero-bike-smoke {
-    left: 50%;
-    bottom: 192px;
-    width: 106%;
-    transform: translateX(-50%);
+    display: none;
   }
 
   .hero-adventages {
-    left: 3px;
-    right: 3px;
-    bottom: 144px;
+    left: 2px;
+    right: 2px;
+    bottom: 13%;
   }
 
   .hero-adventages__block {
-    min-height: 78px;
-    padding: 0 4px;
+    min-height: 67px;
+    padding: 0 3px;
   }
 
   .hero-adventages__block + .hero-adventages__block {
-    padding-left: 4px;
-  }
-
-  .hero-adventages__icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .hero-adventages__block-text strong {
-    font-size: clamp(19px, 6vw, 27px);
-  }
-
-  .hero-adventages__block-text > span {
-    font-size: clamp(6.4px, 2vw, 8.5px);
+    padding-left: 3px;
   }
 
   .hero-content__actions {
     left: 12px;
     right: 12px;
-    bottom: 72px;
-  }
-
-  .primary {
-    height: 56px;
+    bottom: 5.1%;
   }
 
   .hero-mobile-benefits {
-    left: 4px;
-    right: 4px;
-    bottom: 7px;
-    min-height: 60px;
-  }
-
-  .hero-mobile-benefits__item {
-    padding: 0 5px;
-    grid-template-columns: 24px minmax(0, 1fr);
-    gap: 6px;
-  }
-
-  .hero-mobile-benefits__item svg {
-    width: 24px;
-    height: 24px;
+    left: 8px;
+    right: 8px;
+    bottom: 0.55%;
   }
 }
 
 @media (max-width: 390px) {
-  .hero-content {
-    padding-top: 86px;
+  .hero-model {
+    font-size: 28.2vw;
   }
 
-  .hero-model {
-    font-size: 23.3vw;
+  .hero-bike {
+    width: 93vw;
+  }
+
+  .hero-rocks {
+    display: none;
   }
 
   .hero-slogan::before {
     font-size: 16px;
   }
-
-  .hero-manifest {
-    top: 84px;
-  }
-
-  .hero-rail {
-    top: 270px;
-  }
-
-  .hero-bike {
-    top: 242px;
-    left: 50%;
-    width: 108%;
-    transform: translateX(-50%);
-  }
 }
 
-
-@media (max-width: 900px) and (max-height: 620px) and (orientation: landscape) {
+/* Short portrait phones: compress vertical rhythm, keep bike on the rocks. */
+@media (max-width: 900px) and (max-height: 720px) and (orientation: portrait) {
   .hero {
-    min-height: 560px;
+    min-height: 640px;
   }
 
-  .hero-content {
-    padding-top: 72px;
+  .hero-content__title {
+    top: 78px;
   }
 
   .hero-brand {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 5px;
   }
 
   .hero-model {
-    font-size: min(18vw, 112px);
+    font-size: min(26.8vw, 102px);
   }
 
   .hero-slogan {
-    margin-top: 8px;
+    top: 238px;
+  }
+
+  .hero-manifest {
+    top: 80px;
+  }
+
+  .hero-rail {
+    top: 232px;
   }
 
   .hero-bike {
-    top: 150px;
-    width: min(66vw, 520px);
+    bottom: 22.7%;
+    width: min(96vw, 408px);
   }
 
   .hero-rocks {
-    bottom: 118px;
-    width: min(72vw, 590px);
+    bottom: 17.9%;
   }
 
   .hero-adventages {
-    bottom: 92px;
+    bottom: 12.6%;
   }
 
   .hero-content__actions {
-    bottom: 34px;
+    bottom: 4.9%;
+  }
+}
+
+/* Landscape mobile is a fallback, not the portrait reference composition. */
+@media (max-width: 900px) and (max-height: 620px) and (orientation: landscape) {
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero-content__title {
+    top: 92px;
+    left: 28px;
+  }
+
+  .hero-brand {
+    font-size: 26px;
+  }
+
+  .hero-model {
+    font-size: min(15vw, 108px);
+  }
+
+  .hero-slogan {
+    top: 218px;
+    left: 30px;
+  }
+
+  .hero-bike {
+    left: 61%;
+    bottom: 17.5%;
+    width: min(58vw, 500px);
+  }
+
+  .hero-rocks {
+    left: 63%;
+    bottom: 12%;
+    width: min(82vw, 650px);
+  }
+
+  .hero-adventages {
+    left: 34%;
+    right: 8px;
+    bottom: 12%;
+  }
+
+  .hero-content__actions {
+    left: 28px;
+    right: auto;
+    bottom: 26px;
+    width: 280px;
   }
 
   .hero-mobile-benefits,
@@ -699,187 +710,281 @@ $acid: #dfff00;
   }
 }
 
-
-// Финальная мобильная композиция по референсу
-@media (max-width: 900px) {
+/* ============================================================
+   MOBILE PORTRAIT STABILIZATION
+   One coordinate system for the whole lower composition.
+   The bike, specs, CTA and benefits are anchored to the bottom
+   in px/clamp values instead of unrelated viewport percentages.
+   ============================================================ */
+@media (max-width: 560px) and (orientation: portrait) {
   .hero {
     height: 100svh;
-    min-height: 720px;
+    min-height: 660px;
+    background: #f7f7f3;
   }
 
-  .hero-content {
-    padding: 86px 16px 0;
+  /* Solid lower platform: no milky/white fade. */
+  .hero::after {
+    height: 180px;
+    background: #0b0c0d;
   }
 
-  .hero-brand {
-    margin-left: 4px;
-    font-size: clamp(28px, 7.4vw, 48px);
+  /* One continuous middle background. It ends exactly at the
+     lower platform so there is no random white strip or floating seam. */
+  .hero-backdrop__mountains {
+    left: -34%;
+    right: -31%;
+    top: 24.5%;
+    bottom: 176px;
+    height: auto;
+    opacity: 0.94;
+    overflow: hidden;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
-  .hero-model {
-    font-size: clamp(80px, 22.8vw, 136px);
-    line-height: 0.72;
+  .hero-backdrop__mountains::before {
+    left: 0;
+    right: 0;
+    top: -10%;
+    bottom: -8%;
+    background: url('../img/hero-back.webp') 58% 58% / cover no-repeat;
+    opacity: 0.88;
+    filter: grayscale(0.1) saturate(0.78) contrast(1.03) brightness(1.03);
   }
 
-  .hero-slogan {
-    width: 220px;
-    margin-top: 10px;
+  .hero-backdrop__mountains::after {
+    content: none;
   }
 
-  .hero-bike {
-    top: clamp(276px, 36svh, 318px);
-    left: 50%;
-    width: min(96vw, 560px);
-    transform: translateX(-50%);
+  /* Mobile diagonals use one geometry. The dark band and the acid
+     stripe are strict parallels instead of two unrelated shapes. */
+  .hero-backdrop__right::before {
+    top: -18%;
+    right: -7%;
+    bottom: 142px;
+    width: 37%;
+    height: auto;
+    clip-path: none;
+    transform: rotate(25deg);
+    transform-origin: 50% 0;
+    background:
+      linear-gradient(rgba(6, 8, 9, 0.5), rgba(6, 8, 9, 0.5)),
+      url('../img/hero-back.webp') 76% 35% / auto 118% no-repeat;
   }
 
-  .hero-rocks {
-    left: 50%;
-    bottom: 186px;
-    width: min(122vw, 680px);
-    transform: translateX(-50%);
+  .hero-backdrop__right::after {
+    top: -18%;
+    right: 31.5%;
+    bottom: 142px;
+    width: 7px;
+    height: auto;
+    transform: rotate(25deg);
+    transform-origin: 50% 0;
   }
 
+  /* On phones the separate rocks layer causes a second horizon.
+     The rocky foreground is already present in hero-back.webp. */
+  .hero-rocks,
   .hero-bike-smoke {
-    left: 50%;
-    bottom: 190px;
-    width: 102%;
-    opacity: 0.34;
+    display: none;
+  }
+
+  /* Bike is now tied to the top of the lower UI instead of svh %. */
+  .hero-bike {
+    top: auto;
+    left: 51%;
+    bottom: 168px;
+    width: min(86vw, 354px);
     transform: translateX(-50%);
   }
 
+  /* Specs row = one clean block with equal cells and fixed separators. */
   .hero-adventages {
-    left: 6px;
-    right: 6px;
-    bottom: 146px;
-    padding: 10px 0 9px;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    width: 100%;
+    height: 72px;
+    margin: 0;
+    padding: 6px 6px 5px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    background: #121416;
+    border-top: 1px solid rgba(247, 247, 243, 0.16);
+    border-bottom: 1px solid rgba(247, 247, 243, 0.1);
   }
 
   .hero-adventages__block {
-    min-height: 74px;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    height: 60px;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    text-align: center;
+  }
+
+  .hero-adventages__block + .hero-adventages__block {
+    padding-left: 5px;
+  }
+
+  .hero-adventages__block + .hero-adventages__block::before {
+    top: 5px;
+    bottom: 5px;
+    left: 0;
+    width: 1px;
+    background: rgba(247, 247, 243, 0.26);
   }
 
   .hero-adventages__icon {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    flex: 0 0 20px;
   }
 
-  .hero-content__actions {
-    left: 16px;
-    right: 16px;
-    bottom: 74px;
-  }
-
-  .primary {
-    height: 58px;
-  }
-
-  .hero-mobile-benefits {
-    bottom: 7px;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero {
-    min-height: 700px;
-  }
-
-  .hero-content {
-    padding: 82px 12px 0;
-  }
-
-  .hero-brand {
-    font-size: clamp(27px, 7.5vw, 38px);
-  }
-
-  .hero-model {
-    font-size: clamp(76px, 23vw, 112px);
-  }
-
-  .hero-slogan {
-    width: 205px;
-    margin-top: 9px;
-  }
-
-  .hero-bike {
-    top: clamp(274px, 36.5svh, 306px);
-    width: 96vw;
-  }
-
-  .hero-rocks {
-    bottom: 178px;
-    width: 124vw;
-    display: none;
-  }
-
-  .hero-bike-smoke {
-    bottom: 184px;
-    width: 104%;
-  }
-
-  .hero-adventages {
-    left: 2px;
-    right: 2px;
-    bottom: 140px;
-    padding: 9px 0 8px;
-  }
-
-  .hero-adventages__block {
-    min-height: 70px;
+  .hero-adventages__block-text {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    gap: 3px;
   }
 
   .hero-adventages__block-text strong {
-    font-size: clamp(18px, 5.8vw, 26px);
+    font-size: clamp(20px, 5.7vw, 24px);
+    line-height: 0.92;
   }
 
-  .hero-adventages__block-text > span {
-    font-size: clamp(6px, 1.9vw, 8px);
+  .hero-adventages__block-text strong small {
+    font-size: 8px;
   }
 
+  .hero-adventages__block-text > span,
+  .hero-adventages__block:nth-child(4) .hero-adventages__block-text > span::after {
+    font-size: clamp(5.4px, 1.45vw, 6.4px);
+    line-height: 1.15;
+    letter-spacing: 0.035em;
+  }
+
+  /* CTA gets its own stable row. */
   .hero-content__actions {
-    left: 12px;
-    right: 12px;
-    bottom: 70px;
+    left: 7px;
+    right: 7px;
+    bottom: 39px;
+    width: auto;
+    margin: 0;
   }
 
   .primary {
-    height: 54px;
+    height: 52px;
+    padding: 0 22px;
+    font-size: clamp(14px, 4vw, 17px);
   }
 
+  /* Bottom benefits: equal thirds, centered content, clear dividers. */
   .hero-mobile-benefits {
-    bottom: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 34px;
+    min-height: 34px;
+    padding: 0 7px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    background: #0b0c0d;
+    border-top: 1px solid rgba(223, 255, 0, 0.13);
+  }
+
+  .hero-mobile-benefits__item {
+    position: relative;
+    height: 26px;
+    min-width: 0;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .hero-mobile-benefits__item::after {
+    content: none;
+  }
+
+  .hero-mobile-benefits__item + .hero-mobile-benefits__item::before {
+    left: 0;
+    top: 3px;
+    bottom: 3px;
+    width: 1px;
+    background: rgba(247, 247, 243, 0.25);
+  }
+
+  .hero-mobile-benefits__item svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+  }
+
+  .hero-mobile-benefits__item span {
+    width: auto;
+    color: rgba(247, 247, 243, 0.78);
+    font-size: clamp(5px, 1.35vw, 6px);
+    line-height: 1.12;
+    letter-spacing: 0.025em;
+    text-align: left;
   }
 }
 
-@media (max-width: 390px) {
-  .hero-content {
-    padding-top: 80px;
+/* Compact portrait: same geometry, only slightly smaller artwork/UI. */
+@media (max-width: 560px) and (max-height: 700px) and (orientation: portrait) {
+  .hero {
+    min-height: 620px;
   }
 
-  .hero-model {
-    font-size: 23vw;
+  .hero::after {
+    height: 166px;
+  }
+
+  .hero-backdrop__mountains {
+    bottom: 162px;
+  }
+
+  .hero-backdrop__right::before,
+  .hero-backdrop__right::after {
+    bottom: 132px;
   }
 
   .hero-bike {
-    top: 288px;
-    width: 97vw;
-  }
-
-  .hero-rocks {
-    // bottom: 174px;
-    // width: 126vw;
-    display: none;
-  }
-
-  .hero-bike-smoke {
-    bottom: 180px;
+    bottom: 154px;
+    width: min(82vw, 328px);
   }
 
   .hero-adventages {
-    bottom: 138px;
+    bottom: 92px;
+    height: 66px;
+  }
+
+  .hero-adventages__block {
+    height: 54px;
   }
 
   .hero-content__actions {
-    bottom: 68px;
+    bottom: 35px;
+  }
+
+  .primary {
+    height: 47px;
+  }
+
+  .hero-mobile-benefits {
+    height: 31px;
+    min-height: 31px;
   }
 }
