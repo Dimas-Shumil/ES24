@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f7f3" />
-    <link rel="preload" href="site/components/header.html" as="fetch" crossorigin="anonymous" />
+    <link
+      rel="preload"
+      href="site/components/header.html"
+      as="fetch"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="site/css/main.min.css?v=smoke-visible-1" />
     <link rel="stylesheet" href="site/css/header.css?v=header-glass-1" />
     <link rel="stylesheet" href="site/css/hero-motion.css?v=hero-motion-1" />
@@ -192,7 +197,9 @@
 
             <div class="hero-mobile-benefits__item">
               <svg viewBox="0 0 48 48" aria-hidden="true">
-                <path d="M24 6 38 12v10c0 10-6 16-14 20C16 38 10 32 10 22V12L24 6Z" />
+                <path
+                  d="M24 6 38 12v10c0 10-6 16-14 20C16 38 10 32 10 22V12L24 6Z"
+                />
                 <path d="m18 23 4 4 8-9" />
               </svg>
               <span>НАДЁЖНАЯ<br />КОНСТРУКЦИЯ</span>
@@ -201,7 +208,9 @@
             <div class="hero-mobile-benefits__item">
               <svg viewBox="0 0 48 48" aria-hidden="true">
                 <circle cx="24" cy="24" r="10" />
-                <path d="M24 5v7M24 36v7M5 24h7M36 24h7M10.5 10.5l5 5M32.5 32.5l5 5M37.5 10.5l-5 5M15.5 32.5l-5 5" />
+                <path
+                  d="M24 5v7M24 36v7M5 24h7M36 24h7M10.5 10.5l5 5M32.5 32.5l5 5M37.5 10.5l-5 5M15.5 32.5l-5 5"
+                />
               </svg>
               <span>ПРОВЕРЕН<br />В РЕАЛЬНЫХ УСЛОВИЯХ</span>
             </div>
@@ -269,8 +278,195 @@
         </div>
       </section>
 
-      <section class="next">
-        <h2>ergregfer</h2>
+      <section class="second" id="second">
+        <div class="second__mountains" aria-hidden="true"></div>
+
+        <div class="second__decor second__decor--acid" aria-hidden="true"></div>
+        <div class="second__decor second__decor--dark" aria-hidden="true"></div>
+        <div
+          class="second__decor second__decor--light"
+          aria-hidden="true"
+        ></div>
+
+        <div class="second__ground" aria-hidden="true">
+          <img src="site/img/stones4.png" alt="" />
+        </div>
+
+        <div class="second__corner" aria-hidden="true"></div>
+
+        <div class="second__inner">
+          <div class="second__intro">
+            <h2 class="second__title">
+              <span>ПРОДУМАН</span>
+              <span>В КАЖДОЙ</span>
+              <span class="second__title-accent">ДЕТАЛИ</span>
+            </h2>
+          </div>
+
+          <div class="second__stage">
+            <div class="second__bike-box">
+              <img
+                class="second__bike"
+                src="site/img/mot2.png"
+                alt="Regulmoto Legend 300"
+              />
+
+              <button
+                class="second__point second__point--engine is-active"
+                type="button"
+                data-second-target="engine"
+                aria-label="Двигатель"
+                aria-pressed="true"
+              >
+                <span></span>
+              </button>
+
+              <button
+                class="second__point second__point--suspension"
+                type="button"
+                data-second-target="suspension"
+                aria-label="Подвеска"
+                aria-pressed="false"
+              >
+                <span></span>
+              </button>
+
+              <button
+                class="second__point second__point--wheels"
+                type="button"
+                data-second-target="wheels"
+                aria-label="Колёса"
+                aria-pressed="false"
+              >
+                <span></span>
+              </button>
+
+              <button
+                class="second__point second__point--frame"
+                type="button"
+                data-second-target="frame"
+                aria-label="Рама"
+                aria-pressed="false"
+              >
+                <span></span>
+              </button>
+            </div>
+
+            <!-- <div class="second__cards">
+              <article
+                class="second__card second__card--engine is-active"
+                data-second-card="engine"
+              >
+                <div class="second__card-image second__card-image--engine">
+                  <img src="site/img/mot.webp" alt="" />
+                </div>
+
+                <div class="second__card-body">
+                  <h3>ДВИГАТЕЛЬ 300 <small>cc</small></h3>
+                  <p>
+                    Одноцилиндровый 4-тактный мотор. Мощная тяга на низах,
+                    уверенный разгон и запас ресурса для сложного бездорожья.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="second__card second__card--suspension"
+                data-second-card="suspension"
+              >
+                <div class="second__card-image second__card-image--suspension">
+                  <img src="site/img/mot.webp" alt="" />
+                </div>
+
+                <div class="second__card-body">
+                  <h3>ПОДВЕСКА</h3>
+                  <p>
+                    Инвертированная вилка уверенно отрабатывает камни, колеи,
+                    неровности и резкие изменения рельефа.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="second__card second__card--wheels"
+                data-second-card="wheels"
+              >
+                <div class="second__card-image second__card-image--wheels">
+                  <img src="site/img/mot.webp" alt="" />
+                </div>
+
+                <div class="second__card-body">
+                  <h3>КОЛЁСА 21 / 18</h3>
+                  <p>
+                    Эндуро-схема 21/18 с внедорожной резиной для уверенного
+                    сцепления на грунте, камнях и рыхлом покрытии.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="second__card second__card--frame"
+                data-second-card="frame"
+              >
+                <div class="second__card-image second__card-image--frame">
+                  <img src="site/img/mot.webp" alt="" />
+                </div>
+
+                <div class="second__card-body">
+                  <h3>РАМА</h3>
+                  <p>
+                    Жёсткая геометрия и конструкция, рассчитанная на нагрузки
+                    эндуро и активную езду по пересечённой местности.
+                  </p>
+                </div>
+              </article>
+         </div> -->
+
+            <div class="second__thumbs-bar">
+  <div class="second__thumbs" aria-label="Детали мотоцикла">
+    <button
+      class="second__thumb is-active"
+      type="button"
+      data-second-target="engine"
+      aria-pressed="true"
+    >
+      <img src="site/img/mot.webp" alt="" />
+      <span>ДВИГАТЕЛЬ</span>
+    </button>
+
+    <button
+      class="second__thumb"
+      type="button"
+      data-second-target="suspension"
+      aria-pressed="false"
+    >
+      <img src="site/img/mot.webp" alt="" />
+      <span>ПОДВЕСКА</span>
+    </button>
+
+    <button
+      class="second__thumb"
+      type="button"
+      data-second-target="wheels"
+      aria-pressed="false"
+    >
+      <img src="site/img/mot.webp" alt="" />
+      <span>КОЛЁСА</span>
+    </button>
+
+    <button
+      class="second__thumb"
+      type="button"
+      data-second-target="frame"
+      aria-pressed="false"
+    >
+      <img src="site/img/mot.webp" alt="" />
+      <span>РАМА</span>
+    </button>
+  </div>
+</div>
+          </div>
+        </div>
       </section>
     </main>
 

@@ -185,5 +185,68 @@
     requestAnimationFrame(() => header.classList.add('site-header--ready'));
   };
 
+const initSecond = () => {
+  const section = document.querySelector('.second');
+
+  if (!section) return;
+
+  const controls = Array.from(
+    section.querySelectorAll('[data-second-target]'),
+  );
+
+  const cards = Array.from(
+    section.querySelectorAll('[data-second-card]'),
+  );
+
+  if (!controls.length || !cards.length) return;
+
+  let activeId = 'engine';
+
+  const setActive = (id) => {
+    activeId = id;
+
+    controls.forEach((control) => {
+      const active = control.dataset.secondTarget === id;
+
+      control.classList.toggle('is-active', active);
+      control.setAttribute('aria-pressed', String(active));
+    });
+
+    cards.forEach((card) => {
+      const active = card.dataset.secondCard === id;
+
+      card.classList.toggle('is-active', active);
+    });
+  };
+
+  controls.forEach((control) => {
+    const id = control.dataset.secondTarget;
+
+    control.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 900) {
+        setActive(id);
+      }
+    });
+
+    control.addEventListener('focus', () => {
+      setActive(id);
+    });
+
+    control.addEventListener('click', () => {
+      setActive(id);
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      setActive(activeId);
+    }
+  });
+
+  setActive('engine');
+};
+
+initSecond();
+
   Promise.all(Array.from(componentHosts, loadComponent));
 })();
