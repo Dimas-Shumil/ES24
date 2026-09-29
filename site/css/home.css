@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
@@ -48,7 +48,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("../img/home-hero.png") center 48%/cover no-repeat;
+  background: url("../img/home-hero.webp") center 48%/cover no-repeat;
   transform-origin: 50% 58%;
   pointer-events: none;
   will-change: transform;
@@ -201,7 +201,7 @@ a {
 }
 
 .home-hero__title span {
-  background-image: url("../img/home-hero.png");
+  background-image: url("../img/home-hero.webp");
   background-size: 1450px auto;
   background-position: 28% 46%;
   filter: grayscale(1) contrast(1.45) brightness(0.34);
@@ -213,7 +213,7 @@ a {
 
 .home-hero__title strong {
   margin-top: 4px;
-  background-image: linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88)), url("../img/home-hero.png");
+  background-image: linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88)), url("../img/home-hero.webp");
   background-size: auto, 1180px auto;
   background-position: center, 38% 69%;
   background-blend-mode: multiply;
@@ -911,7 +911,7 @@ a {
     background: linear-gradient(180deg, rgba(11, 12, 13, 0), rgba(11, 12, 13, 0.18));
   }
   .home-hero__background {
-    background: linear-gradient(180deg, rgba(247, 247, 243, 0.72) 0%, rgba(247, 247, 243, 0.26) 27%, rgba(247, 247, 243, 0.04) 58%), url("../img/home-hero.png") 58% 50%/cover no-repeat;
+    background: linear-gradient(180deg, rgba(247, 247, 243, 0.72) 0%, rgba(247, 247, 243, 0.26) 27%, rgba(247, 247, 243, 0.04) 58%), url("../img/home-hero.webp") 58% 50%/cover no-repeat;
     transform-origin: 58% 50%;
   }
   .home-hero__slash {
@@ -1310,7 +1310,7 @@ a {
     min-height: 560px;
   }
   .home-hero__background {
-    background: linear-gradient(90deg, rgba(247, 247, 243, 0.68) 0%, rgba(247, 247, 243, 0.08) 48%), url("../img/home-hero.png") 58% 52%/cover no-repeat;
+    background: linear-gradient(90deg, rgba(247, 247, 243, 0.68) 0%, rgba(247, 247, 243, 0.08) 48%), url("../img/home-hero.webp") 58% 52%/cover no-repeat;
   }
   .home-hero__content {
     left: 18px;

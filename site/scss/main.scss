@@ -1,4 +1,4 @@
-$paper: #f7f7f3;
+﻿$paper: #f7f7f3;
 $ink: #0b0c0d;
 $muted: #66696c;
 $line: rgba(11, 12, 13, 0.24);
@@ -1795,7 +1795,7 @@ button {
       rgba($paper, 0.04) 78%,
       rgba($paper, 0) 100%
     ),
-    url('../img//mount2.png') 70% 54% / cover no-repeat;
+    url('../img//mount2.webp') 70% 54% / cover no-repeat;
 
   filter: saturate(0.92) contrast(1.04);
 }
@@ -1817,7 +1817,7 @@ button {
 
   background:
     linear-gradient(rgba($acid, 0.92), rgba($acid, 0.92)),
-    url('../img/mount2.png') 64% 28% / 1100px auto no-repeat;
+    url('../img/mount2.webp') 64% 28% / 1100px auto no-repeat;
 
   background-blend-mode: multiply;
 }
@@ -1828,7 +1828,7 @@ button {
 
   background:
     linear-gradient(rgba($ink, 0.57), rgba($ink, 0.57)),
-    url('../img//mount2.png') 73% 20% / cover no-repeat;
+    url('../img//mount2.webp') 73% 20% / cover no-repeat;
 
   background-blend-mode: multiply;
 }
@@ -1840,7 +1840,7 @@ button {
     linear-gradient(rgba($paper, 0.48), rgba($paper, 0.48));
   // background:
   //   linear-gradient(rgba($paper, 0.48), rgba($paper, 0.48)),
-  //   url('../img/mount2.png') 86% 18% / cover no-repeat;
+  //   url('../img/mount2.webp') 86% 18% / cover no-repeat;
 
   background-blend-mode: screen;
 }
@@ -1935,7 +1935,7 @@ button {
 
   background-image:
     linear-gradient(rgba($acid, 0.88), rgba($acid, 0.88)),
-    url('../img/mount2.png');
+    url('../img/mount2.webp');
 
   background-size:
     auto,
@@ -2911,4 +2911,5 @@ button {
     font-size: 7px;
   }
 }
+
 

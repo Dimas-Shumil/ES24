@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 (() => {
   const hero = document.querySelector('[data-home-hero]');
@@ -167,7 +167,7 @@
   window.addEventListener('hashchange', syncHash);
 
   [
-    'site/img/home-hero.png',
+    'site/img/home-hero.webp',
     'site/img/mot2.webp',
     'site/img/mot.webp',
     'site/img/mot1.webp',
@@ -181,3 +181,4 @@
   if (Number.isInteger(initialIndex)) active = initialIndex;
   updateUI(active, false);
 })();
+

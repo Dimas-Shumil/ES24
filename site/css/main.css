@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
@@ -1200,7 +1200,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, #f7f7f3 0%, rgba(247, 247, 243, 0.98) 19%, rgba(247, 247, 243, 0.76) 35%, rgba(247, 247, 243, 0.2) 58%, rgba(247, 247, 243, 0.04) 78%, rgba(247, 247, 243, 0) 100%), url("../img//mount2.png") 70% 54%/cover no-repeat;
+  background: linear-gradient(90deg, #f7f7f3 0%, rgba(247, 247, 243, 0.98) 19%, rgba(247, 247, 243, 0.76) 35%, rgba(247, 247, 243, 0.2) 58%, rgba(247, 247, 243, 0.04) 78%, rgba(247, 247, 243, 0) 100%), url("../img//mount2.webp") 70% 54%/cover no-repeat;
   filter: saturate(0.92) contrast(1.04);
 }
 
@@ -1218,14 +1218,14 @@ button {
 .second__decor--acid {
   left: 40.5%;
   width: 3.2%;
-  background: linear-gradient(rgba(223, 255, 0, 0.92), rgba(223, 255, 0, 0.92)), url("../img/mount2.png") 64% 28%/1100px auto no-repeat;
+  background: linear-gradient(rgba(223, 255, 0, 0.92), rgba(223, 255, 0, 0.92)), url("../img/mount2.webp") 64% 28%/1100px auto no-repeat;
   background-blend-mode: multiply;
 }
 
 .second__decor--dark {
   left: 57%;
   width: 8.5%;
-  background: linear-gradient(rgba(11, 12, 13, 0.57), rgba(11, 12, 13, 0.57)), url("../img//mount2.png") 73% 20%/cover no-repeat;
+  background: linear-gradient(rgba(11, 12, 13, 0.57), rgba(11, 12, 13, 0.57)), url("../img//mount2.webp") 73% 20%/cover no-repeat;
   background-blend-mode: multiply;
 }
 
@@ -1310,7 +1310,7 @@ button {
   padding-right: 18px;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88)), url("../img/mount2.png");
+  background-image: linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88)), url("../img/mount2.webp");
   background-size: auto, 980px auto;
   background-position: center, 34% 70%;
   background-blend-mode: multiply;

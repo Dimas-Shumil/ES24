@@ -1,4 +1,4 @@
-$acid: #dfff00;
+﻿$acid: #dfff00;
 
 * {
   box-sizing: border-box;
@@ -50,7 +50,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url('../img/home-hero.png') center 48% / cover no-repeat;
+  background: url('../img/home-hero.webp') center 48% / cover no-repeat;
   transform-origin: 50% 58%;
   pointer-events: none;
   will-change: transform;
@@ -97,7 +97,7 @@ a {
   linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88));
   // background:
   //   linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88)),
-  //   url('../img/home-hero.png') 62% 43% / 1500px auto no-repeat;
+  //   url('../img/home-hero.webp') 62% 43% / 1500px auto no-repeat;
   background-blend-mode: multiply;
 }
 
@@ -108,7 +108,7 @@ a {
     linear-gradient(rgba(11, 12, 13, 0.55), rgba(11, 12, 13, 0.55));
   // background:
   //   linear-gradient(rgba(11, 12, 13, 0.55), rgba(11, 12, 13, 0.55)),
-  //   url('../img/home-hero.png') 76% 44% / cover no-repeat;
+  //   url('../img/home-hero.webp') 76% 44% / cover no-repeat;
   background-blend-mode: multiply;
 }
 
@@ -119,7 +119,7 @@ a {
 //     linear-gradient(rgba(247, 247, 243, 0.42), rgba(247, 247, 243, 0.42));
 //   // background:
 //   //   linear-gradient(rgba(247, 247, 243, 0.42), rgba(247, 247, 243, 0.42)),
-//   //   url('../img/home-hero.png') 88% 44% / cover no-repeat;
+//   //   url('../img/home-hero.webp') 88% 44% / cover no-repeat;
 //   background-blend-mode: screen;
 // }
 
@@ -225,7 +225,7 @@ a {
 }
 
 .home-hero__title span {
-  background-image: url('../img/home-hero.png');
+  background-image: url('../img/home-hero.webp');
   background-size: 1450px auto;
   background-position: 28% 46%;
   filter: grayscale(1) contrast(1.45) brightness(0.34);
@@ -239,7 +239,7 @@ a {
   margin-top: 4px;
   background-image:
     linear-gradient(rgba(223, 255, 0, 0.88), rgba(223, 255, 0, 0.88)),
-    url('../img/home-hero.png');
+    url('../img/home-hero.webp');
   background-size:
     auto,
     1180px auto;
@@ -1134,7 +1134,7 @@ a {
         rgba(247, 247, 243, 0.26) 27%,
         rgba(247, 247, 243, 0.04) 58%
       ),
-      url('../img/home-hero.png') 58% 50% / cover no-repeat;
+      url('../img/home-hero.webp') 58% 50% / cover no-repeat;
     transform-origin: 58% 50%;
   }
 
@@ -1627,7 +1627,7 @@ a {
   .home-hero__background {
     background:
       linear-gradient(90deg, rgba(247, 247, 243, 0.68) 0%, rgba(247, 247, 243, 0.08) 48%),
-      url('../img/home-hero.png') 58% 52% / cover no-repeat;
+      url('../img/home-hero.webp') 58% 52% / cover no-repeat;
   }
 
   .home-hero__content {
@@ -1753,3 +1753,4 @@ a {
     transform: translateX(-50%);
   }
 }
+
