@@ -1603,647 +1603,161 @@ button {
   }
 }
 
-// ES24 — mobile hero composition
-
-.hero-mobile-benefits {
-  display: none;
-}
-
-@media (max-width: 900px) {
+// hero responsive desktop and laptop
+@media (max-width: 1500px) and (min-width: 1181px) {
   .hero {
-    height: max(100svh, 820px);
-    min-height: 820px;
-    background: $paper;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 4;
-      height: 38%;
-      pointer-events: none;
-      background:
-        linear-gradient(
-          180deg,
-          rgba($ink, 0) 0%,
-          rgba($ink, 0.48) 24%,
-          rgba($ink, 0.9) 58%,
-          rgba($ink, 0.97) 100%
-        ),
-        radial-gradient(circle at 50% 18%, rgba($acid, 0.09), transparent 42%);
-    }
+    min-height: 760px;
   }
 
   .hero-content {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-
-    width: auto;
-    margin: 0;
-    padding: 94px 16px 0;
-
-    display: block;
-  }
-
-  .hero-content__title {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    gap: 0;
+    width: min(900px, 61vw);
+    margin-left: clamp(54px, 5vw, 82px);
+    padding-top: 58px;
+    gap: 16px;
   }
 
   .hero-brand {
-    margin: 0 0 5px 6px;
-    padding: 0;
-
-    font-size: clamp(32px, 8.4vw, 58px);
-    line-height: 0.92;
-    letter-spacing: 0.045em;
-
-    background-size: 760px auto;
-    background-position: 42% 28%;
+    margin-left: 26px;
+    font-size: clamp(58px, 4.8vw, 74px);
   }
 
   .hero-model {
-    gap: 0;
-    margin: 0;
-    padding: 0;
-
-    font-size: clamp(88px, 24vw, 164px);
-    line-height: 0.72;
-    letter-spacing: 0;
-
-    transform: skewX(-7deg) scaleX(1.025);
-    transform-origin: left top;
-  }
-
-  .hero-model__name,
-  .hero-model__detail {
-    margin: 0;
-    padding: 0 7px;
-  }
-
-  .hero-model__name {
-    background-size: 800px auto;
-    background-position: 50% 36%;
-  }
-
-  .hero-model__detail {
-    margin-top: 2px;
-
-    font-size: 0.72em;
-    line-height: 0.78;
-    letter-spacing: 0.01em;
-
-    background-size:
-      auto,
-      720px auto;
-    background-position:
-      center,
-      35% 56%;
+    font-size: clamp(172px, 14vw, 220px);
   }
 
   .hero-slogan {
-    position: relative;
-    z-index: 9;
-
-    width: 230px;
-    margin: 16px 0 0 4px;
-    padding: 0 0 15px;
-
-    font-size: 0;
-  }
-
-  .hero-slogan::before {
-    content: 'НЕ ДЛЯ ТОГО,\A ЧТОБЫ СТОЯТЬ.';
-    display: block;
-    white-space: pre;
-
-    color: $ink;
-    font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
-    font-size: clamp(17px, 4.8vw, 25px);
-    line-height: 1.25;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 0.055em;
-  }
-
-  .hero-slogan::after {
-    left: 1px;
-    bottom: 0;
-    width: 42px;
-    height: 4px;
-  }
-
-  .hero-manifest {
-    top: 92px;
-    right: 15px;
-    z-index: 9;
-
-    padding-right: 15px;
-    color: rgba($paper, 0.64);
-  }
-
-  .hero-manifest::before {
-    right: 0;
-    height: 50px;
-    background: rgba($paper, 0.48);
-  }
-
-  .hero-manifest::after {
-    right: 14px;
-    bottom: -14px;
-    width: 16px;
-  }
-
-  .hero-manifest__text {
-    gap: 5px;
-    font-size: 9px;
-    letter-spacing: 0.17em;
-  }
-
-  .hero-rail {
-    top: 300px;
-    right: 15px;
-    left: auto;
-    z-index: 9;
-
-    gap: 0;
-    padding-right: 14px;
-
-    color: rgba($paper, 0.82);
-    text-align: right;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      right: 0;
-      width: 1px;
-      height: 76px;
-      background: rgba($paper, 0.46);
-    }
-  }
-
-  .hero-rail__pages {
-    display: none;
-  }
-
-  .hero-rail__labels {
-    align-items: flex-end;
-    gap: 6px;
-
-    font-size: 9px;
-    line-height: 1;
-    letter-spacing: 0.15em;
-  }
-
-  .hero-rail__labels::after {
-    content: '';
-    width: 22px;
-    height: 3px;
-    margin-top: 6px;
-    background: $acid;
-  }
-
-  .hero-backdrop__mountains {
-    left: -24%;
-    right: -20%;
-    bottom: 23%;
-
-    height: 54%;
-
-    mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 88%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 88%, transparent 100%);
-  }
-
-  .hero-backdrop__mountains::before {
-    top: -14%;
-    bottom: -10%;
-
-    background-position: 58% 56%;
-    transform: none;
-
-    opacity: 0.7;
-    filter: saturate(0.7) contrast(1.05) brightness(1.08);
-  }
-
-  .hero-backdrop__mountains::after {
-    background: linear-gradient(
-      180deg,
-      rgba($paper, 0.94) 0%,
-      rgba($paper, 0.54) 18%,
-      rgba($paper, 0.08) 50%,
-      rgba($paper, 0) 78%
-    );
-  }
-
-  .hero-backdrop__right {
-    width: 72%;
-  }
-
-  .hero-backdrop__slash--black {
-    top: -8%;
-    right: 21%;
-
-    width: 41%;
-    height: 61%;
-
-    transform: skewX(-25deg);
-  }
-
-  .hero-backdrop__slash--black::before {
-    right: -95%;
-    bottom: -4%;
-
-    width: 430%;
-    height: 150%;
-
-    background-size:
-      100% 100%,
-      auto 165%;
-    background-position:
-      center,
-      33% 49%;
-
-    transform: skewX(25deg);
-  }
-
-  .hero-backdrop__slash--acid {
-    top: -9%;
-    right: 63%;
-
-    width: 4.6%;
-    height: 67%;
-
-    transform: skewX(-25deg);
-  }
-
-  .hero-backdrop__mountain-panel {
-    top: 5%;
-    right: -14%;
-
-    width: 67%;
-    height: 55%;
-
-    transform: skewX(-25deg);
-  }
-
-  .hero-backdrop__mountain-panel::before {
-    inset: -12% -82%;
-    background-position: 76% 22%;
-    transform: skewX(25deg) scale(1.08);
-    filter: saturate(0.74) contrast(1.1) brightness(0.78);
-  }
-
-  .hero-backdrop__mountain-panel::after {
-    width: 6px;
-    height: 29%;
-  }
-
-  .hero-backdrop__rider-panel,
-  .hero-backdrop__lower-cut,
-  .hero-backdrop__lower-info {
-    display: none;
+    font-size: 19px;
   }
 
   .hero-bike {
-    top: clamp(286px, 38vw, 352px);
-    bottom: auto;
-    left: -5%;
-    z-index: 6;
-
-    width: min(112vw, 760px);
+    left: 34%;
+    bottom: 5%;
+    width: 49%;
   }
 
   .hero-rocks {
-    left: -9%;
-    bottom: 216px;
-    z-index: 7;
-
-    width: min(120vw, 820px);
-    overflow: visible;
+    left: 31%;
+    width: 41%;
   }
 
-  .hero-bike-smoke {
-    left: -4%;
-    bottom: 220px;
-    z-index: 5;
-
-    width: 104%;
-    height: 44%;
-
-    opacity: 0.48;
+  .hero-backdrop__right {
+    width: 44%;
   }
 
-  .hero-bike-smoke::before,
-  .hero-bike-smoke::after {
-    opacity: 0.18;
+  .hero-adventages,
+  .hero-obzor {
+    width: 545px;
+  }
+}
+
+@media (max-width: 1180px) and (min-width: 901px) {
+  .hero {
+    min-height: 700px;
   }
 
-  .hero-adventages {
-    position: absolute;
-    left: 8px;
-    right: 8px;
-    bottom: 168px;
-    z-index: 10;
-
-    width: auto;
-    margin: 0;
-    padding: 13px 0 11px;
-
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .hero-content {
+    width: 58vw;
+    margin-left: 48px;
+    padding-top: 72px;
+    gap: 14px;
   }
 
-  .hero-adventages__block {
-    min-width: 0;
-    min-height: 82px;
-    padding: 0 6px;
-
-    align-items: center;
-    justify-content: flex-start;
-    gap: 7px;
-
-    text-align: center;
+  .hero-brand {
+    margin-left: 22px;
+    font-size: clamp(48px, 4.9vw, 60px);
   }
 
-  .hero-adventages__block + .hero-adventages__block {
-    padding-left: 6px;
+  .hero-model {
+    font-size: clamp(140px, 13.8vw, 176px);
   }
 
-  .hero-adventages__block + .hero-adventages__block::before {
-    top: 5px;
-    bottom: 3px;
-    background: rgba($paper, 0.26);
-  }
-
-  .hero-adventages__icon {
-    width: 28px;
-    height: 28px;
-    stroke: $acid;
-    stroke-width: 2.3;
-  }
-
-  .hero-adventages__block-text {
-    min-width: 0;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .hero-adventages__block-text strong {
-    color: $paper;
-    font-size: clamp(20px, 5.7vw, 31px);
-    line-height: 0.95;
-    white-space: nowrap;
-  }
-
-  .hero-adventages__block-text strong small {
-    color: $paper;
-    font-size: 11px;
-  }
-
-  .hero-adventages__block-text > span {
-    color: rgba($paper, 0.74);
-    font-size: clamp(7px, 2.15vw, 10px);
-    line-height: 1.18;
-    letter-spacing: 0.05em;
-  }
-
-  .hero-content__actions {
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 92px;
-    z-index: 11;
-
-    display: block;
-    padding: 0;
-  }
-
-  .podobrat {
-    display: none;
+  .hero-slogan {
+    width: 275px;
+    font-size: 17px;
   }
 
   .primary {
-    width: 100%;
-    height: 58px;
-
-    justify-content: center;
-    gap: 0;
-
-    font-size: clamp(14px, 4vw, 18px);
-    letter-spacing: 0.025em;
-
-    clip-path: polygon(2.6% 0, 97.4% 0, 100% 50%, 97.4% 100%, 2.6% 100%, 0 50%);
+    width: 232px;
   }
 
-  .primary svg {
-    display: none;
+  .podobrat {
+    width: 214px;
+  }
+
+  .hero-adventages,
+  .hero-obzor {
+    width: 490px;
+  }
+
+  .hero-adventages__block {
+    padding-right: 12px;
+  }
+
+  .hero-adventages__block + .hero-adventages__block {
+    padding-left: 16px;
+  }
+
+  .hero-bike {
+    left: 35%;
+    bottom: 7%;
+    width: 51%;
+  }
+
+  .hero-rocks {
+    left: 33%;
+    width: 44%;
+  }
+
+  .hero-backdrop__right {
+    width: 47%;
+  }
+
+  .hero-rail {
+    left: 16px;
+  }
+
+  .hero-manifest {
+    right: 16px;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 760px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-top: 38px;
+    gap: 12px;
+  }
+
+  .hero-brand {
+    font-size: clamp(46px, 4.4vw, 62px);
+  }
+
+  .hero-model {
+    font-size: clamp(138px, 12.7vw, 190px);
+  }
+
+  .hero-slogan {
+    font-size: 16px;
+  }
+
+  .hero-bike {
+    bottom: 2%;
+    width: min(48%, 720px);
+  }
+
+  .hero-rocks {
+    width: 38%;
+  }
+
+  .hero-adventages__block {
+    min-height: 76px;
   }
 
   .hero-obzor {
     display: none;
-  }
-
-  .hero-mobile-benefits {
-    position: absolute;
-    left: 7px;
-    right: 7px;
-    bottom: 13px;
-    z-index: 11;
-
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: center;
-
-    min-height: 60px;
-  }
-
-  .hero-mobile-benefits__item {
-    position: relative;
-
-    min-width: 0;
-    padding: 0 7px;
-
-    display: grid;
-    grid-template-columns: 28px minmax(0, 1fr);
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero-mobile-benefits__item + .hero-mobile-benefits__item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    bottom: 5px;
-    width: 1px;
-    background: rgba($paper, 0.28);
-  }
-
-  .hero-mobile-benefits__item svg {
-    width: 28px;
-    height: 28px;
-
-    fill: none;
-    stroke: $paper;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .hero-mobile-benefits__item span {
-    min-width: 0;
-
-    color: rgba($paper, 0.86);
-    font-size: clamp(6.7px, 1.8vw, 9px);
-    line-height: 1.32;
-    font-weight: 700;
-    letter-spacing: 0.065em;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero {
-    height: max(100svh, 790px);
-    min-height: 790px;
-  }
-
-  .hero-content {
-    padding: 90px 12px 0;
-  }
-
-  .hero-brand {
-    margin-left: 4px;
-  }
-
-  .hero-model {
-    font-size: clamp(84px, 24.5vw, 118px);
-  }
-
-  .hero-slogan {
-    width: 205px;
-    margin-top: 12px;
-  }
-
-  .hero-manifest {
-    top: 88px;
-    right: 11px;
-  }
-
-  .hero-manifest__text,
-  .hero-rail__labels {
-    font-size: 8px;
-  }
-
-  .hero-rail {
-    top: 286px;
-    right: 11px;
-  }
-
-  .hero-bike {
-    top: 277px;
-    left: -8%;
-    width: 118%;
-  }
-
-  .hero-rocks {
-    left: -13%;
-    bottom: 208px;
-    width: 128%;
-  }
-
-  .hero-bike-smoke {
-    left: -7%;
-    bottom: 210px;
-    width: 112%;
-  }
-
-  .hero-adventages {
-    left: 3px;
-    right: 3px;
-    bottom: 164px;
-  }
-
-  .hero-adventages__block {
-    min-height: 78px;
-    padding: 0 4px;
-  }
-
-  .hero-adventages__block + .hero-adventages__block {
-    padding-left: 4px;
-  }
-
-  .hero-adventages__icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .hero-adventages__block-text strong {
-    font-size: clamp(19px, 6vw, 27px);
-  }
-
-  .hero-adventages__block-text > span {
-    font-size: clamp(6.4px, 2vw, 8.5px);
-  }
-
-  .hero-content__actions {
-    left: 12px;
-    right: 12px;
-    bottom: 88px;
-  }
-
-  .primary {
-    height: 56px;
-  }
-
-  .hero-mobile-benefits {
-    left: 4px;
-    right: 4px;
-    bottom: 11px;
-    min-height: 60px;
-  }
-
-  .hero-mobile-benefits__item {
-    padding: 0 5px;
-    grid-template-columns: 24px minmax(0, 1fr);
-    gap: 6px;
-  }
-
-  .hero-mobile-benefits__item svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero-content {
-    padding-top: 86px;
-  }
-
-  .hero-model {
-    font-size: 23.3vw;
-  }
-
-  .hero-slogan::before {
-    font-size: 16px;
-  }
-
-  .hero-manifest {
-    top: 84px;
-  }
-
-  .hero-rail {
-    top: 270px;
-  }
-
-  .hero-bike {
-    top: 266px;
-    left: -10%;
-    width: 122%;
   }
 }
 
@@ -2982,3 +2496,419 @@ button {
     display: none;
   }
 }
+
+
+// second section mobile refinement
+@media (max-width: 900px) {
+  .second {
+    padding: 54px 0 42px;
+    overflow: hidden;
+  }
+
+  .second__inner {
+    width: 100%;
+  }
+
+  .second__mountains {
+    opacity: 0.52;
+    background-position: 62% 50%;
+  }
+
+  .second__intro {
+    padding: 0 18px;
+  }
+
+  .second__title {
+    font-size: clamp(48px, 13.2vw, 78px);
+    line-height: 0.84;
+  }
+
+  .second__stage {
+    margin-top: 4px;
+  }
+
+  .second__bike-box {
+    left: auto;
+    top: auto;
+    width: min(96vw, 640px);
+    margin: 0 auto;
+  }
+
+  .second__bike {
+    width: 100%;
+    transform: none;
+  }
+
+  .second__cards {
+    position: relative;
+    z-index: 12;
+    width: calc(100% - 28px);
+    margin: -14px auto 0;
+    gap: 10px;
+  }
+
+  .second__card,
+  .second__card--engine,
+  .second__card--suspension,
+  .second__card--wheels,
+  .second__card--frame {
+    grid-template-columns: 38% 62%;
+    width: 100%;
+    min-height: 122px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 34px rgba($ink, 0.1);
+  }
+
+  .second__card-image {
+    min-height: 122px;
+  }
+
+  .second__card-image img {
+    width: 230px;
+  }
+
+  .second__card-image--engine img {
+    left: -58px;
+    top: -74px;
+  }
+
+  .second__card-image--suspension img {
+    left: -88px;
+    top: -40px;
+  }
+
+  .second__card-image--wheels img {
+    left: -104px;
+    top: -62px;
+  }
+
+  .second__card-image--frame img {
+    left: -64px;
+    top: -50px;
+  }
+
+  .second__card-body {
+    padding: 14px 14px 15px;
+  }
+
+  .second__card-body h3 {
+    margin-bottom: 9px;
+    padding-bottom: 8px;
+    font-size: clamp(16px, 4.4vw, 19px);
+  }
+
+  .second__card-body p {
+    font-size: clamp(10.5px, 2.7vw, 12px);
+    line-height: 1.34;
+  }
+
+  .second__decor--acid {
+    left: 71%;
+    width: 5%;
+  }
+
+  .second__decor--dark {
+    left: 77%;
+    width: 18%;
+  }
+}
+
+@media (max-width: 560px) {
+  .second {
+    padding-top: 46px;
+    padding-bottom: 34px;
+  }
+
+  .second__intro {
+    padding: 0 14px;
+  }
+
+  .second__title {
+    font-size: clamp(44px, 13.5vw, 60px);
+  }
+
+  .second__bike-box {
+    width: 96vw;
+  }
+
+  .second__cards {
+    width: calc(100% - 24px);
+    margin-top: -8px;
+    gap: 9px;
+  }
+
+  .second__card,
+  .second__card--engine,
+  .second__card--suspension,
+  .second__card--wheels,
+  .second__card--frame {
+    grid-template-columns: 40% 60%;
+    min-height: 116px;
+  }
+
+  .second__card-image {
+    min-height: 116px;
+  }
+
+  .second__card-image img {
+    width: 214px;
+  }
+
+  .second__card-body {
+    padding: 12px 11px 13px;
+  }
+
+  .second__card-body h3 {
+    font-size: 16px;
+  }
+
+  .second__card-body p {
+    font-size: 10.5px;
+  }
+}
+
+// Мобильная вторая секция: один активный блок вместо длинной стопки
+@media (max-width: 900px) {
+  .second {
+    min-height: 100svh;
+    padding: 56px 0 34px;
+    overflow: hidden;
+  }
+
+  .second__mountains {
+    opacity: 0.68;
+    background-position: 64% 50%;
+  }
+
+  .second__decor--acid {
+    left: 73%;
+    width: 4.5%;
+  }
+
+  .second__decor--dark {
+    left: 78%;
+    width: 16%;
+  }
+
+  .second__intro {
+    padding: 0 16px;
+  }
+
+  .second__title {
+    font-size: clamp(50px, 13.5vw, 76px);
+    line-height: 0.83;
+  }
+
+  .second__stage {
+    position: relative;
+    inset: auto;
+    height: auto;
+    margin-top: 8px;
+  }
+
+  .second__bike-box {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(98vw, 620px);
+    margin: 0 auto;
+  }
+
+  .second__bike {
+    width: 100%;
+    transform: none;
+  }
+
+  .second__point {
+    display: none;
+  }
+
+  .second__cards {
+    position: relative;
+    inset: auto;
+    z-index: 12;
+    display: block;
+    width: calc(100% - 28px);
+    min-height: 138px;
+    margin: -24px auto 0;
+    pointer-events: auto;
+  }
+
+  .second__card,
+  .second__card--engine,
+  .second__card--suspension,
+  .second__card--wheels,
+  .second__card--frame {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    width: 100%;
+    min-height: 138px;
+    overflow: hidden;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    box-shadow: 0 16px 38px rgba($ink, 0.12);
+  }
+
+  .second__card.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .second__card-image {
+    min-height: 138px;
+  }
+
+  .second__card-image img {
+    width: 238px;
+  }
+
+  .second__card-image--engine img {
+    left: -62px;
+    top: -78px;
+  }
+
+  .second__card-image--suspension img {
+    left: -92px;
+    top: -42px;
+  }
+
+  .second__card-image--wheels img {
+    left: -108px;
+    top: -64px;
+  }
+
+  .second__card-image--frame img {
+    left: -68px;
+    top: -52px;
+  }
+
+  .second__card-body {
+    padding: 14px 14px 15px;
+  }
+
+  .second__card-body h3 {
+    margin-bottom: 9px;
+    padding-bottom: 8px;
+    font-size: clamp(16px, 4.2vw, 19px);
+  }
+
+  .second__card-body p {
+    font-size: clamp(10.5px, 2.7vw, 12px);
+    line-height: 1.34;
+  }
+
+  .second__thumbs-bar {
+    position: relative;
+    z-index: 13;
+    width: 100%;
+  }
+
+  .second__thumbs {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    display: flex;
+    width: calc(100% - 28px);
+    height: 72px;
+    margin: 12px auto 0;
+    padding: 5px;
+    gap: 4px;
+    border-radius: 14px;
+  }
+
+  .second__thumb {
+    margin: 0;
+    border-radius: 9px;
+    clip-path: none;
+  }
+
+  .second__thumb span {
+    left: 8px;
+    bottom: 7px;
+    font-size: 8px;
+  }
+
+  .second__thumb.is-active {
+    border-color: $acid;
+    box-shadow:
+      inset 0 0 0 1px rgba($acid, 0.9),
+      inset 0 -3px 0 $acid;
+  }
+
+  .second__ground,
+  .second__corner {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .second {
+    padding: 46px 0 28px;
+  }
+
+  .second__intro {
+    padding: 0 12px;
+  }
+
+  .second__title {
+    font-size: clamp(46px, 13.4vw, 60px);
+  }
+
+  .second__bike-box {
+    width: 96vw;
+  }
+
+  .second__cards {
+    width: calc(100% - 22px);
+    min-height: 128px;
+    margin-top: -18px;
+  }
+
+  .second__card,
+  .second__card--engine,
+  .second__card--suspension,
+  .second__card--wheels,
+  .second__card--frame {
+    grid-template-columns: 40% 60%;
+    min-height: 128px;
+  }
+
+  .second__card-image {
+    min-height: 128px;
+  }
+
+  .second__card-image img {
+    width: 220px;
+  }
+
+  .second__card-body {
+    padding: 12px 11px 13px;
+  }
+
+  .second__card-body h3 {
+    font-size: 16px;
+  }
+
+  .second__card-body p {
+    font-size: 10.5px;
+  }
+
+  .second__thumbs {
+    width: calc(100% - 22px);
+    height: 66px;
+    margin-top: 10px;
+  }
+
+  .second__thumb span {
+    font-size: 7px;
+  }
+}
+

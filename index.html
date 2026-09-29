@@ -10,469 +10,235 @@
       as="fetch"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="site/css/main.min.css?v=smoke-visible-1" />
-    <link rel="stylesheet" href="site/css/header.css?v=header-glass-1" />
-    <link rel="stylesheet" href="site/css/hero-motion.css?v=hero-motion-1" />
-    <link rel="stylesheet" href="site/css/hero-mobile.css?v=hero-mobile-1" />
-    <title>Enduro Siberia 24 — Regulmoto Legend 300</title>
+    <link rel="preload" href="site/img/home-hero.png" as="image" />
+    <link rel="preload" href="site/img/stones4.png" as="image" />
+    <link rel="preload" href="site/img/mot2.webp" as="image" />
+    <link rel="stylesheet" href="site/css/header.css" />
+    <link rel="stylesheet" href="site/css/home.css" />
+    <title>Enduro Siberia 24 — мотоциклы, экипировка и расходники</title>
   </head>
-
-  <body>
+  <body class="home-page">
     <div class="site-header-slot" data-component="header"></div>
 
-    <main class="page">
-      <section class="hero">
-        <!-- прогрессия -->
-        <div class="hero-rail" aria-hidden="true">
-          <ol class="hero-rail__pages">
-            <li class="hero-rail__page hero-rail__page--active">01</li>
-            <li class="hero-rail__page">02</li>
-            <li class="hero-rail__page">03</li>
-          </ol>
-
-          <div class="hero-rail__labels">
-            <span>ЛЕС</span>
-            <span>ГОРЫ</span>
-            <span>ГРЯЗЬ</span>
-            <span>СВОБОДА</span>
-          </div>
-        </div>
-
-        <!-- справа манифест -->
-
-        <div class="hero-manifest" aria-hidden="true">
-          <div class="hero-manifest__text">
-            <span>ЭНДУРО</span>
-            <span>БОЛЬШЕ</span>
-            <span>ЧЕМ ДОРОГА</span>
-          </div>
-        </div>
-
-        <!-- контент -->
-
-        <div class="hero-content">
-          <h1 class="hero-content__title">
-            <span class="hero-brand">REGULMOTO</span>
-
-            <span class="hero-model">
-              <span class="hero-model__name">LEGEND</span>
-              <span class="hero-model__detail">300</span>
-            </span>
-          </h1>
-
-          <p class="hero-slogan">
-            СОЗДАН<br />
-            ДЛЯ БЕЗДОРОЖЬЯ.<br />
-            РОЖДЕН<br />
-            ДЛЯ СВОБОДЫ.
-          </p>
-
-          <div class="hero-content__actions">
-            <button class="primary" type="button">
-              <span>УТОЧНИТЬ НАЛИЧИЕ</span>
-              <svg viewBox="0 0 24 18" aria-hidden="true">
-                <path
-                  d="M2 8h15.5l-4.5-4.5L14.5 2 22 9l-7.5 7-1.5-1.5 4.5-4.5H2V8Z"
-                />
-              </svg>
-            </button>
-
-            <button class="podobrat" type="button">
-              <span>ПОДОБРАТЬ КОМПЛЕКТАЦИЮ</span>
-            </button>
-          </div>
-
-          <div class="hero-adventages" aria-label="Характеристики мотоцикла">
-            <div class="hero-adventages__block">
-              <svg
-                class="hero-adventages__icon"
-                viewBox="0 0 48 48"
-                aria-hidden="true"
-              >
-                <path d="M11 17h25l4 6v12H8V23l3-6Z" />
-                <path
-                  d="M16 17v-5h6v5M27 17v-5h6v5M14 35v4M34 35v4M8 25H4M44 25h-4"
-                />
-              </svg>
-
-              <p class="hero-adventages__block-text">
-                <strong>300 <small>cc</small></strong>
-                <span>ОБЪЕМ ДВИГАТЕЛЯ</span>
-              </p>
-            </div>
-
-            <div class="hero-adventages__block">
-              <svg
-                class="hero-adventages__icon"
-                viewBox="0 0 48 48"
-                aria-hidden="true"
-              >
-                <path d="M29 4 13 28h12l-6 16 16-24H23L29 4Z" />
-              </svg>
-
-              <p class="hero-adventages__block-text">
-                <strong>28 <small>hp</small></strong>
-                <span>МОЩНОСТЬ</span>
-              </p>
-            </div>
-
-            <div class="hero-adventages__block">
-              <svg
-                class="hero-adventages__icon"
-                viewBox="0 0 48 48"
-                aria-hidden="true"
-              >
-                <circle cx="24" cy="24" r="15" />
-                <circle cx="24" cy="24" r="5" />
-                <path
-                  d="M24 9v10m0 10v10M9 24h10m10 0h10M14 14l7 7m6 6 7 7m0-20-7 7m-6 6-7 7"
-                />
-              </svg>
-
-              <p class="hero-adventages__block-text">
-                <strong>21 / 18</strong>
-                <span>КОЛЕСА<br />ДЛЯ БЕЗДОРОЖЬЯ</span>
-              </p>
-            </div>
-
-            <div class="hero-adventages__block">
-              <svg
-                class="hero-adventages__icon"
-                viewBox="0 0 48 48"
-                aria-hidden="true"
-              >
-                <path d="M13 7h18l5 5v29H13V7Z" />
-                <path d="M31 7v7h7M18 22h13M18 28h13M18 34h8" />
-              </svg>
-
-              <p class="hero-adventages__block-text">
-                <strong>ПТС</strong>
-                <span>В НАЛИЧИИ</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="hero-obzor">
-            <a class="hero-obzor__button" href="#">
-              <span class="hero-obzor__icon">
-                <svg viewBox="0 0 14 16" aria-hidden="true">
-                  <path d="M13 8L1 15V1L13 8Z" />
-                </svg>
-              </span>
-
-              <span class="hero-obzor__button-text">
-                СМОТРЕТЬ
-                <span>ОБЗОР</span>
-              </span>
-            </a>
-
-            <div class="hero-obzor__gallery" aria-hidden="true">
-              <span class="hero-obzor__image hero-obzor__image--front">
-                <img src="site/img/mot.webp" alt="" />
-              </span>
-
-              <span class="hero-obzor__image hero-obzor__image--middle">
-                <img src="site/img/mot.webp" alt="" />
-              </span>
-
-              <span class="hero-obzor__image hero-obzor__image--rear">
-                <img src="site/img/mot.webp" alt="" />
-              </span>
-            </div>
-
-            <p class="hero-obzor__caption">
-              РЕАЛЬНЫЕ УСЛОВИЯ
-              <span>РЕАЛЬНЫЕ ЭМОЦИИ</span>
-            </p>
-          </div>
-
-          <div class="hero-mobile-benefits" aria-label="Преимущества мотоцикла">
-            <div class="hero-mobile-benefits__item">
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-                <path d="M5 34 15 23l7 7 10-13 11 17" />
-                <path d="M4 39h40" />
-              </svg>
-              <span>ДЛЯ ЛЮБЫХ<br />МАРШРУТОВ</span>
-            </div>
-
-            <div class="hero-mobile-benefits__item">
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-                <path
-                  d="M24 6 38 12v10c0 10-6 16-14 20C16 38 10 32 10 22V12L24 6Z"
-                />
-                <path d="m18 23 4 4 8-9" />
-              </svg>
-              <span>НАДЁЖНАЯ<br />КОНСТРУКЦИЯ</span>
-            </div>
-
-            <div class="hero-mobile-benefits__item">
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-                <circle cx="24" cy="24" r="10" />
-                <path
-                  d="M24 5v7M24 36v7M5 24h7M36 24h7M10.5 10.5l5 5M32.5 32.5l5 5M37.5 10.5l-5 5M15.5 32.5l-5 5"
-                />
-              </svg>
-              <span>ПРОВЕРЕН<br />В РЕАЛЬНЫХ УСЛОВИЯХ</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- дым позади мотоцикла -->
-        <div class="hero-bike-smoke" aria-hidden="true">
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--1"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--2"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--3"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--4"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--5"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--6"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--7"></span>
-          <span class="hero-bike-smoke__puff hero-bike-smoke__puff--8"></span>
-        </div>
-
-        <!-- камни -->
-        <div class="hero-rocks" aria-hidden="true">
-          <img
-            class="hero-rocks__image"
-            src="site/img/stonesIbike.webp"
-            alt=""
-          />
-        </div>
-
-        <!-- мотоцикл -->
-        <div class="hero-bike" aria-hidden="true">
-          <img class="hero-bike__image" src="site/img/mot.webp" alt="" />
-        </div>
-
-        <div class="hero-backdrop" aria-hidden="true">
-          <div class="hero-backdrop__mountains"></div>
-
-          <div class="hero-backdrop__right">
-            <div class="hero-backdrop__slash hero-backdrop__slash--black"></div>
-            <div class="hero-backdrop__slash hero-backdrop__slash--acid"></div>
-            <!-- <div class="hero-backdrop__slash hero-backdrop__slash--white"></div> -->
-
-            <div class="hero-backdrop__mountain-panel"></div>
-
-            <div class="hero-backdrop__rider-panel">
-              <img
-                class="hero-backdrop__rider-image"
-                src="site/img/rider.webp"
-                alt=""
-              />
-            </div>
-
-            <div class="hero-backdrop__lower-cut"></div>
-
-            <div class="hero-backdrop__lower-info">
-              <p class="hero-backdrop__lower-model">
-                <span>REGULMOTO</span>
-                <span><strong>LEGEND </strong>300</span>
-              </p>
-
-              <p class="hero-backdrop__lower-copy">
-                НЕ ДЛЯ ТОГО,<br />
-                ЧТОБЫ СТОЯТЬ.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="second" id="second">
-        <div class="second__mountains" aria-hidden="true"></div>
-
-        <div class="second__decor second__decor--acid" aria-hidden="true"></div>
-        <div class="second__decor second__decor--dark" aria-hidden="true"></div>
+    <main>
+      <section class="home-hero" id="homeHero" data-home-hero>
+        <div class="home-hero__background" aria-hidden="true"></div>
         <div
-          class="second__decor second__decor--light"
+          class="home-hero__slash home-hero__slash--acid"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="home-hero__slash home-hero__slash--dark"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="home-hero__slash home-hero__slash--light"
           aria-hidden="true"
         ></div>
 
-        <div class="second__ground" aria-hidden="true">
+        <div class="home-hero__ground" aria-hidden="true">
           <img src="site/img/stones4.png" alt="" />
         </div>
 
-        <div class="second__corner" aria-hidden="true"></div>
+        <div class="home-hero__manifest" aria-hidden="true">
+          <span>СИБИРЬ</span><span>БОЛЬШЕ</span><span>ЧЕМ ДОРОГА</span>
+        </div>
 
-        <div class="second__inner">
-          <div class="second__intro">
-            <h2 class="second__title">
-              <span>ПРОДУМАН</span>
-              <span>В КАЖДОЙ</span>
-              <span class="second__title-accent">ДЕТАЛИ</span>
-            </h2>
-          </div>
+        <button
+          class="home-hero__arrow home-hero__arrow--prev"
+          type="button"
+          aria-label="Предыдущая категория"
+          data-home-prev
+        >
+          <span></span>
+        </button>
+        <button
+          class="home-hero__arrow home-hero__arrow--next"
+          type="button"
+          aria-label="Следующая категория"
+          data-home-next
+        >
+          <span></span>
+        </button>
 
-          <div class="second__stage">
-            <div class="second__bike-box">
-              <img
-                class="second__bike"
-                src="site/img/mot2.png"
-                alt="Regulmoto Legend 300"
-              />
+        <div class="home-hero__content">
+          <h1 class="home-hero__title" aria-live="polite">
+            <span data-home-title-1>МОТОЦИКЛЫ,</span>
+            <span data-home-title-2>КОТОРЫЕ ВЫБИРАЮТ</span>
+            <strong data-home-title-3>ДУШОЙ</strong>
+          </h1>
 
-              <button
-                class="second__point second__point--engine is-active"
-                type="button"
-                data-second-target="engine"
-                aria-label="Двигатель"
-                aria-pressed="true"
-              >
-                <span></span>
-              </button>
+          <p class="home-hero__copy" data-home-copy>
+            Эндуро для бездорожья. Турэндуро для свободы.<br />Питбайки для
+            драйва.
+          </p>
 
-              <button
-                class="second__point second__point--suspension"
-                type="button"
-                data-second-target="suspension"
-                aria-label="Подвеска"
-                aria-pressed="false"
-              >
-                <span></span>
-              </button>
-
-              <button
-                class="second__point second__point--wheels"
-                type="button"
-                data-second-target="wheels"
-                aria-label="Колёса"
-                aria-pressed="false"
-              >
-                <span></span>
-              </button>
-
-              <button
-                class="second__point second__point--frame"
-                type="button"
-                data-second-target="frame"
-                aria-label="Рама"
-                aria-pressed="false"
-              >
-                <span></span>
-              </button>
-            </div>
-
-            <!-- <div class="second__cards">
-              <article
-                class="second__card second__card--engine is-active"
-                data-second-card="engine"
-              >
-                <div class="second__card-image second__card-image--engine">
-                  <img src="site/img/mot.webp" alt="" />
-                </div>
-
-                <div class="second__card-body">
-                  <h3>ДВИГАТЕЛЬ 300 <small>cc</small></h3>
-                  <p>
-                    Одноцилиндровый 4-тактный мотор. Мощная тяга на низах,
-                    уверенный разгон и запас ресурса для сложного бездорожья.
-                  </p>
-                </div>
-              </article>
-
-              <article
-                class="second__card second__card--suspension"
-                data-second-card="suspension"
-              >
-                <div class="second__card-image second__card-image--suspension">
-                  <img src="site/img/mot.webp" alt="" />
-                </div>
-
-                <div class="second__card-body">
-                  <h3>ПОДВЕСКА</h3>
-                  <p>
-                    Инвертированная вилка уверенно отрабатывает камни, колеи,
-                    неровности и резкие изменения рельефа.
-                  </p>
-                </div>
-              </article>
-
-              <article
-                class="second__card second__card--wheels"
-                data-second-card="wheels"
-              >
-                <div class="second__card-image second__card-image--wheels">
-                  <img src="site/img/mot.webp" alt="" />
-                </div>
-
-                <div class="second__card-body">
-                  <h3>КОЛЁСА 21 / 18</h3>
-                  <p>
-                    Эндуро-схема 21/18 с внедорожной резиной для уверенного
-                    сцепления на грунте, камнях и рыхлом покрытии.
-                  </p>
-                </div>
-              </article>
-
-              <article
-                class="second__card second__card--frame"
-                data-second-card="frame"
-              >
-                <div class="second__card-image second__card-image--frame">
-                  <img src="site/img/mot.webp" alt="" />
-                </div>
-
-                <div class="second__card-body">
-                  <h3>РАМА</h3>
-                  <p>
-                    Жёсткая геометрия и конструкция, рассчитанная на нагрузки
-                    эндуро и активную езду по пересечённой местности.
-                  </p>
-                </div>
-              </article>
-         </div> -->
-
-            <div class="second__thumbs-bar">
-  <div class="second__thumbs" aria-label="Детали мотоцикла">
-    <button
-      class="second__thumb is-active"
-      type="button"
-      data-second-target="engine"
-      aria-pressed="true"
-    >
-      <img src="site/img/mot.webp" alt="" />
-      <span>ДВИГАТЕЛЬ</span>
-    </button>
-
-    <button
-      class="second__thumb"
-      type="button"
-      data-second-target="suspension"
-      aria-pressed="false"
-    >
-      <img src="site/img/mot.webp" alt="" />
-      <span>ПОДВЕСКА</span>
-    </button>
-
-    <button
-      class="second__thumb"
-      type="button"
-      data-second-target="wheels"
-      aria-pressed="false"
-    >
-      <img src="site/img/mot.webp" alt="" />
-      <span>КОЛЁСА</span>
-    </button>
-
-    <button
-      class="second__thumb"
-      type="button"
-      data-second-target="frame"
-      aria-pressed="false"
-    >
-      <img src="site/img/mot.webp" alt="" />
-      <span>РАМА</span>
-    </button>
-  </div>
-</div>
+          <div class="home-hero__actions">
+            <a
+              class="home-hero__button home-hero__button--primary"
+              href="legend-300.html"
+              data-home-primary
+              >СМОТРЕТЬ ЭНДУРО</a
+            >
+            <button
+              class="home-hero__button home-hero__button--secondary"
+              type="button"
+              data-home-picker
+            >
+              ПОДОБРАТЬ ТЕХНИКУ
+            </button>
           </div>
         </div>
+
+        <div class="home-hero__scene" aria-label="Категории Enduro Siberia 24">
+          <a
+            class="home-hero__item is-main"
+            href="legend-300.html"
+            data-home-item="0"
+            data-home-link
+            aria-label="Открыть страницу модели Enduro"
+          >
+            <img src="site/img/enduroHome.png" alt="Enduro" />
+          </a>
+          <a
+            class="home-hero__item is-next"
+            href="legend-300.html"
+            data-home-item="1"
+            data-home-link
+            aria-label="Открыть демонстрационную страницу Tour Enduro"
+          >
+            <img src="site/img/tourenduroHome.png" alt="Tour Enduro" />
+          </a>
+          <a
+            class="home-hero__item is-hidden"
+            href="legend-300.html"
+            data-home-item="2"
+            data-home-link
+            aria-label="Открыть демонстрационную страницу Pitbike"
+          >
+            <img src="site/img/pibikeHome.png" alt="Pitbike" />
+          </a>
+          <a
+            class="home-hero__item home-hero__item--rider is-hidden"
+            href="#equipment"
+            data-home-item="3"
+            data-home-link
+            aria-label="Перейти к экипировке"
+          >
+            <img src="site/img/team.png" alt="Экипировка для эндуро" />
+          </a>
+          <a
+            class="home-hero__item home-hero__item--parts is-prev"
+            href="#consumables"
+            data-home-item="4"
+            data-home-link
+            aria-label="Перейти к расходникам"
+          >
+            <img src="site/img/rashod.png" alt="Экипировка для эндуро" />
+          </a>
+        </div>
+
+        <div class="home-hero__benefits" aria-label="Преимущества">
+          <div class="home-hero__benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3 20 6v6c0 5-3.3 8.7-8 10-4.7-1.3-8-5-8-10V6l8-3Z" />
+              <path d="m8.8 12 2.1 2.1 4.5-4.7" />
+            </svg>
+            <span
+              ><strong>Проверенная техника</strong
+              ><small>Отобранные модели</small></span
+            >
+          </div>
+          <div class="home-hero__benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3 15 9l6 .8-4.5 4.3 1.1 6.1L12 17.3l-5.6 2.9 1.1-6.1L3 9.8 9 9l3-6Z"
+              />
+            </svg>
+            <span
+              ><strong>Сервис и поддержка</strong
+              ><small>Помощь после покупки</small></span
+            >
+          </div>
+          <div class="home-hero__benefit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 7h11v10H3V7Z" />
+              <path d="M14 11h4l3 3v3h-7v-6Z" />
+              <path d="M7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+              <path d="M18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+            </svg>
+            <span><strong>Доставка</strong><small>По России</small></span>
+          </div>
+        </div>
+
+        <div class="home-hero__progress" aria-hidden="true" data-home-progress>
+          <span class="is-active"></span><span></span><span></span><span></span
+          ><span></span>
+        </div>
+
+        <nav class="home-hero__tabs" id="categories" aria-label="Категории">
+          <button
+            class="home-hero__tab is-active"
+            type="button"
+            data-home-tab="0"
+            id="enduro"
+          >
+            <span class="home-hero__tab-media"
+              ><img src="site/img/enduroHome.png" alt=""
+            /></span>
+            <strong>ЭНДУРО</strong>
+          </button>
+          <button
+            class="home-hero__tab"
+            type="button"
+            data-home-tab="1"
+            id="tour-enduro"
+          >
+            <span class="home-hero__tab-media"
+              ><img src="site/img/tourenduroHome.png" alt=""
+            /></span>
+            <strong>ТУРЭНДУРО</strong>
+          </button>
+          <button
+            class="home-hero__tab"
+            type="button"
+            data-home-tab="2"
+            id="pitbikes"
+          >
+            <span class="home-hero__tab-media"
+              ><img src="site/img/pibikeHome.png" alt=""
+            /></span>
+            <strong>ПИТБАЙКИ</strong>
+          </button>
+          <button
+            class="home-hero__tab"
+            type="button"
+            data-home-tab="3"
+            id="equipment"
+          >
+            <span class="home-hero__tab-media home-hero__tab-media--rider"
+              ><img src="site/img/shlem.webp" alt=""
+            /></span>
+            <strong>ЭКИПИРОВКА</strong>
+          </button>
+          <button
+            class="home-hero__tab"
+            type="button"
+            data-home-tab="4"
+            id="consumables"
+          >
+            <span class="home-hero__tab-media">
+              <img src="site/img/rashod.png" alt="" />
+            </span>
+            <strong>РАСХОДНИКИ</strong>
+          </button>
+        </nav>
       </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="site/js/main.js"></script>
-    <script src="site/js/hero-intro.js?v=hero-motion-1"></script>
-    <script src="site/js/hero-smoke.js?v=hero-motion-1"></script>
+    <script src="site/js/home.js"></script>
+    <script src="site/js/home-intro.js"></script>
   </body>
 </html>

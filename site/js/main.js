@@ -40,6 +40,24 @@
     const searchPanel = header.querySelector('[data-header-search]');
     const searchClose = header.querySelector('[data-header-search-close]');
     const searchInput = searchPanel?.querySelector('input[type="search"]');
+    const homeLinks = header.querySelectorAll('[data-nav-home]');
+    const motorcycleLink = header.querySelector('[data-nav-motorcycles]');
+
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const isHomePage = currentPage === 'index.html' || currentPage === '';
+    const isModelPage = currentPage === 'legend-300.html';
+
+    homeLinks.forEach((link) => {
+      link.classList.toggle('is-active', isHomePage);
+      if (isHomePage) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+
+    if (motorcycleLink) {
+      motorcycleLink.classList.toggle('is-active', isModelPage);
+      if (isModelPage) motorcycleLink.setAttribute('aria-current', 'page');
+      else motorcycleLink.removeAttribute('aria-current');
+    }
 
     let lastScrollY = window.scrollY;
     let ticking = false;

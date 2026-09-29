@@ -1,7 +1,4 @@
-// ============================================================
-// ES24 — mobile hero composition
-// Reference-driven vertical poster layout. Desktop remains intact.
-// ============================================================
+// mobile hero layout
 
 $paper: #f7f7f3;
 $ink: #0b0c0d;
@@ -13,8 +10,8 @@ $acid: #dfff00;
 
 @media (max-width: 900px) {
   .hero {
-    height: max(100svh, 820px);
-    min-height: 820px;
+    height: 100svh;
+    min-height: 680px;
     background: $paper;
 
     &::after {
@@ -45,7 +42,7 @@ $acid: #dfff00;
 
     width: auto;
     margin: 0;
-    padding: 94px 16px 0;
+    padding: 88px 16px 0;
 
     display: block;
   }
@@ -61,7 +58,7 @@ $acid: #dfff00;
     margin: 0 0 5px 6px;
     padding: 0;
 
-    font-size: clamp(32px, 8.4vw, 58px);
+    font-size: clamp(30px, 7.8vw, 54px);
     line-height: 0.92;
     letter-spacing: 0.045em;
 
@@ -74,7 +71,7 @@ $acid: #dfff00;
     margin: 0;
     padding: 0;
 
-    font-size: clamp(88px, 24vw, 164px);
+    font-size: clamp(82px, 22.5vw, 150px);
     line-height: 0.72;
     letter-spacing: 0;
 
@@ -113,7 +110,7 @@ $acid: #dfff00;
     z-index: 9;
 
     width: 230px;
-    margin: 16px 0 0 4px;
+    margin: 12px 0 0 4px;
     padding: 0 0 15px;
 
     font-size: 0;
@@ -313,26 +310,28 @@ $acid: #dfff00;
   }
 
   .hero-bike {
-    top: clamp(286px, 38vw, 352px);
+    top: clamp(258px, 35svh, 330px);
     bottom: auto;
-    left: -5%;
+    left: 50%;
     z-index: 6;
 
-    width: min(112vw, 760px);
+    width: min(102vw, 680px);
+    transform: translateX(-50%);
   }
 
   .hero-rocks {
-    left: -9%;
-    bottom: 216px;
+    left: 50%;
+    bottom: 198px;
     z-index: 7;
 
-    width: min(120vw, 820px);
+    width: min(112vw, 760px);
     overflow: visible;
+    transform: translateX(-50%);
   }
 
   .hero-bike-smoke {
     left: -4%;
-    bottom: 220px;
+    bottom: 202px;
     z-index: 5;
 
     width: 104%;
@@ -350,7 +349,7 @@ $acid: #dfff00;
     position: absolute;
     left: 8px;
     right: 8px;
-    bottom: 168px;
+    bottom: 150px;
     z-index: 10;
 
     width: auto;
@@ -418,7 +417,7 @@ $acid: #dfff00;
     position: absolute;
     left: 16px;
     right: 16px;
-    bottom: 92px;
+    bottom: 76px;
     z-index: 11;
 
     display: block;
@@ -454,7 +453,7 @@ $acid: #dfff00;
     position: absolute;
     left: 7px;
     right: 7px;
-    bottom: 13px;
+    bottom: 8px;
     z-index: 11;
 
     display: grid;
@@ -510,12 +509,12 @@ $acid: #dfff00;
 
 @media (max-width: 560px) {
   .hero {
-    height: max(100svh, 790px);
-    min-height: 790px;
+    height: 100svh;
+    min-height: 650px;
   }
 
   .hero-content {
-    padding: 90px 12px 0;
+    padding: 84px 12px 0;
   }
 
   .hero-brand {
@@ -523,7 +522,7 @@ $acid: #dfff00;
   }
 
   .hero-model {
-    font-size: clamp(84px, 24.5vw, 118px);
+    font-size: clamp(76px, 22.8vw, 112px);
   }
 
   .hero-slogan {
@@ -547,27 +546,30 @@ $acid: #dfff00;
   }
 
   .hero-bike {
-    top: 277px;
-    left: -8%;
-    width: 118%;
+    top: clamp(248px, 36svh, 286px);
+    left: 50%;
+    width: 104%;
+    transform: translateX(-50%);
   }
 
   .hero-rocks {
-    left: -13%;
-    bottom: 208px;
-    width: 128%;
+    left: 50%;
+    bottom: 188px;
+    width: 116%;
+    transform: translateX(-50%);
   }
 
   .hero-bike-smoke {
-    left: -7%;
-    bottom: 210px;
-    width: 112%;
+    left: 50%;
+    bottom: 192px;
+    width: 106%;
+    transform: translateX(-50%);
   }
 
   .hero-adventages {
     left: 3px;
     right: 3px;
-    bottom: 164px;
+    bottom: 144px;
   }
 
   .hero-adventages__block {
@@ -595,7 +597,7 @@ $acid: #dfff00;
   .hero-content__actions {
     left: 12px;
     right: 12px;
-    bottom: 88px;
+    bottom: 72px;
   }
 
   .primary {
@@ -605,7 +607,7 @@ $acid: #dfff00;
   .hero-mobile-benefits {
     left: 4px;
     right: 4px;
-    bottom: 11px;
+    bottom: 7px;
     min-height: 60px;
   }
 
@@ -643,8 +645,241 @@ $acid: #dfff00;
   }
 
   .hero-bike {
-    top: 266px;
-    left: -10%;
-    width: 122%;
+    top: 242px;
+    left: 50%;
+    width: 108%;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 900px) and (max-height: 620px) and (orientation: landscape) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    padding-top: 72px;
+  }
+
+  .hero-brand {
+    font-size: 28px;
+  }
+
+  .hero-model {
+    font-size: min(18vw, 112px);
+  }
+
+  .hero-slogan {
+    margin-top: 8px;
+  }
+
+  .hero-bike {
+    top: 150px;
+    width: min(66vw, 520px);
+  }
+
+  .hero-rocks {
+    bottom: 118px;
+    width: min(72vw, 590px);
+  }
+
+  .hero-adventages {
+    bottom: 92px;
+  }
+
+  .hero-content__actions {
+    bottom: 34px;
+  }
+
+  .hero-mobile-benefits,
+  .hero-manifest,
+  .hero-rail {
+    display: none;
+  }
+}
+
+
+// Финальная мобильная композиция по референсу
+@media (max-width: 900px) {
+  .hero {
+    height: 100svh;
+    min-height: 720px;
+  }
+
+  .hero-content {
+    padding: 86px 16px 0;
+  }
+
+  .hero-brand {
+    margin-left: 4px;
+    font-size: clamp(28px, 7.4vw, 48px);
+  }
+
+  .hero-model {
+    font-size: clamp(80px, 22.8vw, 136px);
+    line-height: 0.72;
+  }
+
+  .hero-slogan {
+    width: 220px;
+    margin-top: 10px;
+  }
+
+  .hero-bike {
+    top: clamp(276px, 36svh, 318px);
+    left: 50%;
+    width: min(96vw, 560px);
+    transform: translateX(-50%);
+  }
+
+  .hero-rocks {
+    left: 50%;
+    bottom: 186px;
+    width: min(122vw, 680px);
+    transform: translateX(-50%);
+  }
+
+  .hero-bike-smoke {
+    left: 50%;
+    bottom: 190px;
+    width: 102%;
+    opacity: 0.34;
+    transform: translateX(-50%);
+  }
+
+  .hero-adventages {
+    left: 6px;
+    right: 6px;
+    bottom: 146px;
+    padding: 10px 0 9px;
+  }
+
+  .hero-adventages__block {
+    min-height: 74px;
+  }
+
+  .hero-adventages__icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hero-content__actions {
+    left: 16px;
+    right: 16px;
+    bottom: 74px;
+  }
+
+  .primary {
+    height: 58px;
+  }
+
+  .hero-mobile-benefits {
+    bottom: 7px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-content {
+    padding: 82px 12px 0;
+  }
+
+  .hero-brand {
+    font-size: clamp(27px, 7.5vw, 38px);
+  }
+
+  .hero-model {
+    font-size: clamp(76px, 23vw, 112px);
+  }
+
+  .hero-slogan {
+    width: 205px;
+    margin-top: 9px;
+  }
+
+  .hero-bike {
+    top: clamp(274px, 36.5svh, 306px);
+    width: 96vw;
+  }
+
+  .hero-rocks {
+    bottom: 178px;
+    width: 124vw;
+    display: none;
+  }
+
+  .hero-bike-smoke {
+    bottom: 184px;
+    width: 104%;
+  }
+
+  .hero-adventages {
+    left: 2px;
+    right: 2px;
+    bottom: 140px;
+    padding: 9px 0 8px;
+  }
+
+  .hero-adventages__block {
+    min-height: 70px;
+  }
+
+  .hero-adventages__block-text strong {
+    font-size: clamp(18px, 5.8vw, 26px);
+  }
+
+  .hero-adventages__block-text > span {
+    font-size: clamp(6px, 1.9vw, 8px);
+  }
+
+  .hero-content__actions {
+    left: 12px;
+    right: 12px;
+    bottom: 70px;
+  }
+
+  .primary {
+    height: 54px;
+  }
+
+  .hero-mobile-benefits {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-content {
+    padding-top: 80px;
+  }
+
+  .hero-model {
+    font-size: 23vw;
+  }
+
+  .hero-bike {
+    top: 288px;
+    width: 97vw;
+  }
+
+  .hero-rocks {
+    // bottom: 174px;
+    // width: 126vw;
+    display: none;
+  }
+
+  .hero-bike-smoke {
+    bottom: 180px;
+  }
+
+  .hero-adventages {
+    bottom: 138px;
+  }
+
+  .hero-content__actions {
+    bottom: 68px;
   }
 }
